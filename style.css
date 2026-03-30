@@ -80,12 +80,14 @@ body {
 }
 
 .btn-secondary {
-  border: 1.5px solid var(--primary);
+  border: 2px solid var(--primary);
   color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.15); /* Subtle backing for visibility in light mode */
   border-radius: 4px;
   padding: 12px 28px;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 900 !important; /* Bold and Strong */
+  letter-spacing: 0.1em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -94,14 +96,19 @@ body {
 .dark .btn-secondary {
   border-color: var(--secondary);
   color: var(--secondary);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary:hover {
   background-color: var(--primary);
-  color: #fff;
+  color: #fff !important;
   transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(124, 74, 58, 0.1);
-  letter-spacing: 0.5px;
+  box-shadow: 0 10px 20px rgba(124, 74, 58, 0.15);
+}
+
+.dark .btn-secondary:hover {
+  background-color: var(--secondary);
+  color: var(--primary) !important;
 }
 
 .bg-overlay {
@@ -138,37 +145,18 @@ body {
 
 /* Terra Brand Identity */
 .terra-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--primary);
-  line-height: 1;
-}
-
-.terra-brand span {
-  font-size: 26px; /* Optimized font size for brand impact */
-  display: block;
-}
-
-.dark .terra-brand {
-  color: var(--secondary);
-}
-
-.terra-brand {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 0.75rem !important;
+  gap: 0.8rem !important;
   text-decoration: none !important;
   color: var(--primary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0 !important;
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em;
+  font-weight: 900 !important;
+  font-size: 24px !important; /* Bold and Increased */
+  letter-spacing: 0.15em !important;
+  line-height: 1 !important;
 }
 
 .dark .terra-brand {
@@ -176,8 +164,8 @@ body {
 }
 
 .terra-icon {
-  width: 26px; /* Matches the visual height of the typography caps */
-  height: 26px; 
+  width: 32px; /* Stronger presence */
+  height: 32px; 
   position: relative;
   display: flex;
   align-items: center;
@@ -189,9 +177,9 @@ body {
 .terra-icon::before {
   content: '';
   position: absolute;
-  width: 24px;
-  height: 14px;
-  border: 4.5px solid currentColor; /* Bold stroke to match font weight */
+  width: 28px;
+  height: 18px;
+  border: 5px solid currentColor; /* Heavy stroke */
   border-bottom-left-radius: 45% 100%;
   border-bottom-right-radius: 45% 100%;
   border-top: none;
@@ -201,11 +189,75 @@ body {
 .terra-icon::after {
   content: '';
   position: absolute;
-  width: 24px;
-  height: 4.5px;
+  width: 28px;
+  height: 5px;
   background-color: currentColor;
   top: 25%;
   border-radius: 2px;
+}
+
+header nav {
+  min-height: 100px; /* Increased header height for larger elements */
+  display: flex;
+  align-items: center;
+}
+
+/* Enhanced Header Navigation Links */
+header nav div.hidden.lg\:flex a {
+  font-weight: 850 !important; /* Very Bold */
+  font-size: 17px !important; /* Increased Size */
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header nav div.hidden.lg\:flex a.text-primary {
+  border-bottom-width: 3px !important;
+}
+
+/* Utility elements synchronized */
+header nav button.theme-toggle,
+header nav button.rtl-toggle {
+  font-size: 18px !important; 
+  display: flex;
+  align-items: center;
+  padding: 0 0.8rem !important;
+}
+
+header nav a.btn-primary {
+  font-size: 16px !important;
+  font-weight: 850 !important;
+  padding: 0.75rem 2rem !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile adjustments */
+.mobile-nav-link {
+  font-weight: 850 !important;
+  font-size: 1.6rem !important; 
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase;
+  margin: 0.5rem 0;
+}
+
+/* Button Global Strength */
+.btn-primary {
+  font-weight: 900 !important;
+  letter-spacing: 0.12em !important;
+}
+
+.glass-nav {
+  backdrop-filter: blur(12px);
+  background-color: rgba(253, 251, 248, 0.85);
+}
+
+.dark .glass-nav {
+  background-color: rgba(18, 18, 18, 0.85);
 }
 
 #back-to-top {
@@ -518,3 +570,106 @@ footer a:not(.terra-brand, .social-icon):hover {
 footer a:not(.terra-brand, .social-icon):hover::after {
   width: 100%;
 }
+/* Back to Top Button */
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(124, 74, 58, 0.3);
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:not(.show) {
+  transform: translateY(20px);
+}
+
+#back-to-top:hover {
+  background-color: var(--accent);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(124, 74, 58, 0.4);
+}
+
+.dark #back-to-top {
+  background-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dark .process-step-number {
+  color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ---------------------------------------------------------
+   Global Footer Enhancements - Increased Legibility
+   --------------------------------------------------------- */
+footer {
+  font-family: var(--font-body);
+}
+
+footer h4.font-heading {
+  font-size: 1.2rem !important; /* Larger section headings */
+  letter-spacing: 0.05em;
+  font-weight: 800 !important;
+  margin-bottom: 2rem !important;
+}
+
+footer p.text-sm {
+  font-size: 1rem !important; /* Increased description size */
+  line-height: 1.7 !important;
+  font-weight: 400;
+}
+
+footer ul.text-sm {
+  font-size: 0.95rem !important; /* Increased link/list size */
+  line-height: 2 !important;
+}
+
+footer .text-xs {
+  font-size: 0.9rem !important; /* Significantly increased copyright text from the screenshot */
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+footer .social-icon {
+  width: 44px;
+  height: 44px;
+  font-size: 1.2rem;
+}
+
+/* Ensure footer links are bold and clear */
+footer a {
+  font-weight: 500;
+}
+
+.dark footer {
+  color: #f3f4f6; /* Lighter text for dark mode */
+}
+
+.dark footer p, 
+.dark footer li, 
+.dark footer a {
+  color: #e5e7eb !important; 
+}
+
+.dark footer h4 {
+  color: #ffffff !important;
+}
+

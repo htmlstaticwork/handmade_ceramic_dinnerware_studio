@@ -44,8 +44,8 @@
 <body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300">
 
     <!-- Header -->
-    <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10">
-        <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+    <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10 glass-nav">
+        <nav class="container mx-auto px-6 lg:px-12 flex items-center justify-between">
             <!-- Brand -->
             <a href="index.html" class="terra-brand" aria-label="Terra Home">
                 <div class="terra-icon"></div>
@@ -54,7 +54,7 @@
 
             <!-- Nav Menu -->
             <div
-                class="hidden lg:flex items-center gap-8 font-medium tracking-wide text-sm text-slate-600 dark:text-slate-400">
+                class="hidden lg:flex items-center gap-6 font-medium tracking-wide text-[13px] text-slate-600 dark:text-slate-400">
                 <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
                 <a href="home2.html" class="text-primary border-b-2 border-primary">Home 2</a>
                 <a href="about.html" class="hover:text-primary transition-colors">About</a>
@@ -91,7 +91,7 @@
             <a href="index.html" class="mobile-nav-close" aria-label="Close to Home"><i class="bi bi-x-lg"></i></a>
             <a href="index.html" class="mobile-nav-link text-center">Home 1</a>
             <a href="home2.html" class="mobile-nav-link text-center text-primary">Home 2</a>
-            <a href="process.html" class="mobile-nav-link text-center">Our Process</a>
+            <a href="process.html" class="mobile-nav-link text-center">Process</a>
             <a href="pricing.html" class="mobile-nav-link text-center">Pricing</a>
             <a href="shop.html" class="mobile-nav-link text-center">Shop</a>
             <a href="contact.html" class="mobile-nav-link text-center">Contact</a>
@@ -135,7 +135,7 @@
         </div>
         <div class="relative h-[600px] lg:h-[750px] overflow-hidden reveal-left hero-img-container"
             style="transition-delay: 0.3s;">
-            <img src="assets/images/hero2.png" alt="Premium Gallery" class="hero-img absolute inset-0">
+            <img src="assets/images/hero2.png" alt="Premium Gallery" class="hero-img absolute inset-0 w-full h-full object-cover">
             <div class="bg-overlay"></div>
             <div
                 class="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-6 flex justify-between items-center overlay-content">
@@ -374,7 +374,7 @@
                         <div class="terra-icon"></div>
                         <span>TERRA</span>
                     </a>
-                    <p class="text-slate-900 dark:text-slate-200 text-sm leading-relaxed mb-6">Handmade ceramic studio dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
+                    <p class="text-slate-800 dark:text-slate-100 text-sm leading-relaxed mb-6">Handmade ceramic studio dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
                     <div class="flex gap-4">
                         <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
@@ -384,19 +384,19 @@
 
                 <!-- Links Quick -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
                         <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                         <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
-                        <li><a href="process.html" class="hover:text-primary transition-colors">Our Process</a></li>
+                        <li><a href="process.html" class="hover:text-primary transition-colors">Process</a></li>
                         <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing</a></li>
                     </ul>
                 </div>
 
                 <!-- Links Customer -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Customer Care</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Customer Care</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Care Instructions</a></li>
@@ -406,19 +406,16 @@
 
                 <!-- Contact -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Visit Studio</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
-                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way,
-                            Pottery Valley, PV 8901</li>
-                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i>
-                            hello@artisanclay.com</li>
-                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234)
-                            567-8901</li>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Visit Studio</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way, Pottery Valley, PV 8901</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i> hello@artisanclay.com</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234) 567-8901</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-500 dark:text-slate-400 text-xs">
+            <div class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-600 dark:text-slate-300 text-xs">
                 <p>&copy; 2026 Terra Studio. All Rights Reserved. Crafted with passion.</p>
             </div>
         </div>

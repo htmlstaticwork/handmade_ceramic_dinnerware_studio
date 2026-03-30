@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing | Terra Handmade Ceramics</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Tailwind -->
@@ -37,11 +41,12 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300">
 
     <!-- Header -->
     <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10 glass-nav">
-        <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+        <nav class="container mx-auto px-6 lg:px-12 flex items-center justify-between">
             <!-- Brand -->
             <a href="index.html" class="terra-brand" aria-label="Terra Home">
                 <div class="terra-icon"></div>
@@ -49,11 +54,12 @@
             </a>
 
             <!-- Nav Menu -->
-            <div class="hidden lg:flex items-center gap-8 font-medium tracking-wide text-sm text-slate-600 dark:text-slate-400">
+            <div
+                class="hidden lg:flex items-center gap-6 font-medium tracking-wide text-[13px] text-slate-600 dark:text-slate-400">
                 <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
                 <a href="home2.html" class="hover:text-primary transition-colors">Home 2</a>
                 <a href="about.html" class="hover:text-primary transition-colors">About</a>
-                <a href="process.html" class="hover:text-primary transition-colors">Our Process</a>
+                <a href="process.html" class="hover:text-primary transition-colors">Process</a>
                 <a href="pricing.html" class="text-primary border-b-2 border-primary">Pricing</a>
                 <a href="shop.html" class="hover:text-primary transition-colors">Shop</a>
                 <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
@@ -74,7 +80,8 @@
                     RTL
                 </button>
                 <!-- Hamburger -->
-                <button id="menu-toggle" class="lg:hidden p-2 text-2xl text-slate-900 dark:text-white" aria-label="Toggle Mobile Menu">
+                <button id="menu-toggle" class="lg:hidden p-2 text-2xl text-slate-900 dark:text-white"
+                    aria-label="Toggle Mobile Menu">
                     <i class="bi bi-list"></i>
                 </button>
             </div>
@@ -85,14 +92,17 @@
             <a href="#" class="mobile-nav-close" id="mobile-menu-close"><i class="bi bi-x-lg"></i></a>
             <a href="index.html" class="mobile-nav-link text-center">Home 1</a>
             <a href="home2.html" class="mobile-nav-link text-center">Home 2</a>
-            <a href="process.html" class="mobile-nav-link text-center">Our Process</a>
+            <a href="process.html" class="mobile-nav-link text-center">Process</a>
             <a href="pricing.html" class="mobile-nav-link text-center text-primary">Pricing</a>
             <a href="shop.html" class="mobile-nav-link text-center">Shop</a>
             <a href="contact.html" class="mobile-nav-link text-center">Contact</a>
-            
+
             <div class="mt-8 flex flex-col items-center gap-6 px-12">
-                <a href="signup.html" class="btn-primary py-4 px-8 w-full text-center tracking-widest uppercase text-sm">Sign Up</a>
-                <button class="rtl-toggle px-6 py-2 text-sm font-bold border border-primary/50 dark:border-white/50 rounded hover:bg-primary hover:text-white transition-all uppercase" aria-label="Toggle RTL">
+                <a href="signup.html"
+                    class="btn-primary py-4 px-8 w-full text-center tracking-widest uppercase text-sm">Sign Up</a>
+                <button
+                    class="rtl-toggle px-6 py-2 text-sm font-bold border border-primary/50 dark:border-white/50 rounded hover:bg-primary hover:text-white transition-all uppercase"
+                    aria-label="Toggle RTL">
                     RTL
                 </button>
             </div>
@@ -100,13 +110,18 @@
     </header>
 
     <!-- 1. Hero Section -->
-    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden hero-img-container">
         <div class="absolute inset-0 bg-[url('assets/images/hero2.png')] bg-cover bg-center"></div>
-        <div class="absolute inset-0 bg-dark/60 backdrop-blur-[2px]"></div>
-        <div class="container relative z-10 mx-auto px-6 text-center reveal-left">
-            <h6 class="text-white/60 font-heading tracking-[0.3em] uppercase text-xs mb-4">Investment & Value</h6>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight">Artisan Pricing</h1>
-            <p class="text-white/80 max-w-2xl mx-auto text-lg leading-relaxed font-light">Honest, transparent pricing for ceramic treasures that last a lifetime.</p>
+        <div class="bg-overlay"></div>
+
+        <div class="container relative z-10 mx-auto px-6 text-center reveal-left overlay-content">
+            <h6
+                class="text-primary dark:text-secondary font-heading tracking-[0.3em] uppercase text-sm font-semibold mb-4">
+                Investment & Value</h6>
+            <h1 class="text-5xl lg:text-7xl font-heading font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                Artisan Pricing</h1>
+            <p class="text-slate-900 dark:text-slate-100 max-w-2xl mx-auto text-lg leading-relaxed font-medium">Honest,
+                transparent pricing for ceramic treasures that last a lifetime.</p>
         </div>
     </section>
 
@@ -114,46 +129,72 @@
     <section class="py-24 bg-light dark:bg-dark border-b border-primary/10">
         <div class="container mx-auto px-6 lg:px-12 text-center mb-20 fade-in">
             <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-4">Collection Tiers</h2>
-            <p class="text-slate-500 max-w-xl mx-auto">Thoughtfully curated bundles designed to elevate your everyday dining experience.</p>
+            <p class="text-slate-500 max-w-xl mx-auto">Thoughtfully curated bundles designed to elevate your everyday
+                dining experience.</p>
         </div>
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Starter Set -->
-            <div class="price-card p-10 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 reveal-left hover:shadow-2xl transition-all group">
-                <div class="text-xs font-bold text-primary uppercase tracking-widest mb-6 border-b border-primary/20 pb-4 inline-block">The Starter Set</div>
-                <h3 class="text-4xl font-heading font-bold mb-4">$145<span class="text-sm font-normal text-slate-400">/set</span></h3>
-                <p class="text-sm text-slate-500 mb-8 leading-relaxed">Perfect for individuals or as a wedding gift. Essential pieces for a beautiful breakfast or lunch.</p>
+            <div
+                class="price-card p-10 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 reveal-left hover:shadow-2xl transition-all group">
+                <div
+                    class="text-xs font-bold text-primary uppercase tracking-widest mb-6 border-b border-primary/20 pb-4 inline-block">
+                    The Starter Set</div>
+                <h3 class="text-4xl font-heading font-bold mb-4">$145<span
+                        class="text-sm font-normal text-slate-400">/set</span></h3>
+                <p class="text-sm text-slate-500 mb-8 leading-relaxed">Perfect for individuals or as a wedding gift.
+                    Essential pieces for a beautiful breakfast or lunch.</p>
                 <ul class="space-y-4 mb-10 text-sm font-medium">
                     <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> 1 Dinner Plate</li>
                     <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> 1 Cereal Bowl</li>
                     <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> 1 Signature Mug</li>
                 </ul>
-                <a href="shop.html" class="w-full btn-primary py-4 inline-block text-center text-xs tracking-widest uppercase">Order Now</a>
+                <a href="shop.html"
+                    class="w-full btn-primary py-4 inline-block text-center text-xs tracking-widest uppercase">Order
+                    Now</a>
             </div>
 
             <!-- Dinner Party -->
-            <div class="price-card p-10 bg-primary text-white border border-primary reveal-left hover:shadow-2xl transition-all scale-105 z-10 shadow-xl" style="transition-delay: 0.1s;">
-                <div class="text-xs font-bold text-white uppercase tracking-widest mb-6 border-b border-white/20 pb-4 inline-block">The Dinner Party</div>
-                <h3 class="text-4xl font-heading font-bold mb-4">$520<span class="text-sm font-normal text-white/60">/set</span></h3>
-                <p class="text-sm text-white/70 mb-8 leading-relaxed">Designed for hosting and sharing. A full setting for four guests in your choice of artisan glaze.</p>
+            <div class="price-card p-10 bg-primary text-white border border-primary reveal-left hover:shadow-2xl transition-all scale-105 z-10 shadow-xl"
+                style="transition-delay: 0.1s;">
+                <div
+                    class="text-xs font-bold text-white uppercase tracking-widest mb-6 border-b border-white/20 pb-4 inline-block">
+                    The Dinner Party</div>
+                <h3 class="text-4xl font-heading font-bold mb-4">$520<span
+                        class="text-sm font-normal text-white/60">/set</span></h3>
+                <p class="text-sm text-white/70 mb-8 leading-relaxed">Designed for hosting and sharing. A full setting
+                    for four guests in your choice of artisan glaze.</p>
                 <ul class="space-y-4 mb-10 text-sm font-medium">
                     <li class="flex items-center gap-3"><i class="bi bi-check2 text-white/60"></i> 4 Dinner Plates</li>
                     <li class="flex items-center gap-3"><i class="bi bi-check2 text-white/60"></i> 4 Pasta Bowls</li>
-                    <li class="flex items-center gap-3"><i class="bi bi-check2 text-white/60"></i> 1 Large Serving Dish</li>
+                    <li class="flex items-center gap-3"><i class="bi bi-check2 text-white/60"></i> 1 Large Serving Dish
+                    </li>
                 </ul>
-                <a href="shop.html" class="w-full bg-white text-primary py-4 inline-block text-center text-xs tracking-widest uppercase font-bold hover:bg-secondary transition-colors shadow-lg">Our Most Popular</a>
+                <a href="shop.html"
+                    class="w-full bg-white text-primary py-4 inline-block text-center text-xs tracking-widest uppercase font-bold hover:bg-secondary transition-colors shadow-lg">Our
+                    Most Popular</a>
             </div>
 
             <!-- Full Studio -->
-            <div class="price-card p-10 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 reveal-left hover:shadow-2xl transition-all" style="transition-delay: 0.2s;">
-                <div class="text-xs font-bold text-primary uppercase tracking-widest mb-6 border-b border-primary/20 pb-4 inline-block">The Studio Collection</div>
-                <h3 class="text-4xl font-heading font-bold mb-4">$1,200<span class="text-sm font-normal text-slate-400">/set</span></h3>
-                <p class="text-sm text-slate-500 mb-8 leading-relaxed">The ultimate Terra experience. Equipping your entire kitchen with 24 handcrafted pieces.</p>
+            <div class="price-card p-10 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 reveal-left hover:shadow-2xl transition-all"
+                style="transition-delay: 0.2s;">
+                <div
+                    class="text-xs font-bold text-primary uppercase tracking-widest mb-6 border-b border-primary/20 pb-4 inline-block">
+                    The Studio Collection</div>
+                <h3 class="text-4xl font-heading font-bold mb-4">$1,200<span
+                        class="text-sm font-normal text-slate-400">/set</span></h3>
+                <p class="text-sm text-slate-500 mb-8 leading-relaxed">The ultimate Terra experience. Equipping your
+                    entire kitchen with 24 handcrafted pieces.</p>
                 <ul class="space-y-4 mb-10 text-sm font-medium">
-                    <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> Full Setting for 8</li>
-                    <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> 2 Large Serving Bowls</li>
-                    <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> Priority Workshop Access</li>
+                    <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> Full Setting for 8
+                    </li>
+                    <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> 2 Large Serving Bowls
+                    </li>
+                    <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> Priority Workshop
+                        Access</li>
                 </ul>
-                <a href="shop.html" class="w-full btn-primary py-4 inline-block text-center text-xs tracking-widest uppercase">Contact Artisan</a>
+                <a href="shop.html"
+                    class="w-full btn-primary py-4 inline-block text-center text-xs tracking-widest uppercase">Contact
+                    Artisan</a>
             </div>
         </div>
     </section>
@@ -162,33 +203,42 @@
     <section class="py-24 bg-white dark:bg-dark">
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="reveal-left">
-                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">Individual Pieces</h6>
+                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">Individual
+                    Pieces</h6>
                 <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8">A La Carte Selection</h2>
                 <div class="space-y-6">
                     <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
                         <div>
-                            <h4 class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">Dinner Plates</h4>
+                            <h4
+                                class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
+                                Dinner Plates</h4>
                             <p class="text-xs text-slate-500 uppercase tracking-widest">Ø 28cm | Classic Rim</p>
                         </div>
                         <span class="text-xl font-heading font-bold text-primary">$45.00</span>
                     </div>
                     <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
                         <div>
-                            <h4 class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">Pasta/Salad Bowls</h4>
+                            <h4
+                                class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
+                                Pasta/Salad Bowls</h4>
                             <p class="text-xs text-slate-500 uppercase tracking-widest">Ø 22cm | Depth 6cm</p>
                         </div>
                         <span class="text-xl font-heading font-bold text-primary">$38.00</span>
                     </div>
                     <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
                         <div>
-                            <h4 class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">Artisan Mugs</h4>
+                            <h4
+                                class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
+                                Artisan Mugs</h4>
                             <p class="text-xs text-slate-500 uppercase tracking-widest">350ml | Hand-pulled handles</p>
                         </div>
                         <span class="text-xl font-heading font-bold text-primary">$32.00</span>
                     </div>
                     <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
                         <div>
-                            <h4 class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">Serving Platters</h4>
+                            <h4
+                                class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
+                                Serving Platters</h4>
                             <p class="text-xs text-slate-500 uppercase tracking-widest">Large Oval | 40cm Length</p>
                         </div>
                         <span class="text-xl font-heading font-bold text-primary">$85.00</span>
@@ -196,41 +246,19 @@
                 </div>
             </div>
             <div class="relative reveal-right h-[500px]">
-                <img src="assets/images/ceramic-art3.png" alt="Individual Ceramics" class="w-full h-full object-cover shadow-2xl rounded-sm">
-                <div class="absolute -bottom-6 -left-6 bg-primary text-white p-8 max-w-xs shadow-xl hidden sm:block border-8 border-light dark:border-zinc-800">
-                    <p class="text-sm italic font-light">"Each plate goes through 4 human inspections before firing."</p>
+                <img src="https://images.pexels.com/photos/8063852/pexels-photo-8063852.jpeg" alt="Individual Ceramics"
+                    class="w-full h-full object-cover shadow-2xl rounded-sm">
+                <div
+                    class="absolute -bottom-6 -left-6 bg-primary text-white p-8 max-w-xs shadow-xl hidden sm:block border-8 border-light dark:border-zinc-800">
+                    <p class="text-sm italic font-light">"Each plate goes through 4 human inspections before firing."
+                    </p>
                     <p class="text-[10px] uppercase tracking-widest font-bold mt-4">— Quality Guarantee</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. Bespoke & Wholesale -->
-    <section class="py-24 bg-warm dark:bg-zinc-900 overflow-hidden">
-        <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-             <div class="reveal-left">
-                <img src="assets/images/product-plates.png" alt="Bespoke Work" class="w-full h-auto shadow-2xl scale-110 lg:-translate-x-12">
-            </div>
-            <div class="reveal-right">
-                <h6 class="text-accent font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">Wholesale & Projects</h6>
-                <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8 leading-tight">Elevate Your Hospitality</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">We work closely with chefs and restaurateurs to create custom dinnerware that complements their culinary vision. From rustic bistros to Michelin-starred establishments.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-                    <div class="bg-white dark:bg-dark p-6 border border-primary/5 rounded-sm">
-                        <i class="bi bi-tag text-3xl text-primary mb-3 block"></i>
-                        <h4 class="font-bold text-sm mb-2">Wholesale Rates</h4>
-                        <p class="text-xs text-slate-500">Available for orders over 50 pieces.</p>
-                    </div>
-                    <div class="bg-white dark:bg-dark p-6 border border-primary/5 rounded-sm">
-                        <i class="bi bi-palette text-3xl text-accent mb-3 block"></i>
-                        <h4 class="font-bold text-sm mb-2">Custom Glazes</h4>
-                        <p class="text-xs text-slate-500">Bespoke color matching available.</p>
-                    </div>
-                </div>
-                <a href="contact.html" class="text-primary font-bold text-sm border-b-2 border-primary pb-1 hover:text-accent hover:border-accent transition-all">Inquire About Bulk Orders</a>
-            </div>
-        </div>
-    </section>
+
 
     <!-- 5. Investment FAQ -->
     <section class="py-24 bg-white dark:bg-dark">
@@ -238,26 +266,40 @@
             <h2 class="text-3xl lg:text-5xl font-heading font-bold">Billing FAQ</h2>
         </div>
         <div class="max-w-3xl mx-auto px-6 space-y-6">
-             <details class="group bg-warm dark:bg-zinc-900 p-8 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm">
-                <summary class="flex justify-between items-center font-heading font-bold cursor-pointer list-none text-lg">
+            <details
+                class="group bg-warm dark:bg-zinc-900 p-8 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm">
+                <summary
+                    class="flex justify-between items-center font-heading font-bold cursor-pointer list-none text-lg">
                     Why the price difference compared to factory ceramics?
                     <i class="bi bi-plus-lg group-open:rotate-45 transition-transform duration-300"></i>
                 </summary>
-                <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">Unlike mass-produced items, our pieces are hand-thrown over hours and fired twice in energy-intensive kilns. You are paying for time, specialized skill, and high-grade natural minerals.</p>
+                <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">Unlike mass-produced items, our
+                    pieces are hand-thrown over hours and fired twice in energy-intensive kilns. You are paying for
+                    time, specialized skill, and high-grade natural minerals.</p>
             </details>
-             <details class="group bg-warm dark:bg-zinc-900 p-8 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm" style="transition-delay: 0.1s;">
-                <summary class="flex justify-between items-center font-heading font-bold cursor-pointer list-none text-lg">
+            <details
+                class="group bg-warm dark:bg-zinc-900 p-8 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm"
+                style="transition-delay: 0.1s;">
+                <summary
+                    class="flex justify-between items-center font-heading font-bold cursor-pointer list-none text-lg">
                     Do you offer payment installations?
                     <i class="bi bi-plus-lg group-open:rotate-45 transition-transform duration-300"></i>
                 </summary>
-                <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">Yes, for our Studio and Full Collections, we offer split payments through Klarna or directly via 50% deposit and 50% on completion.</p>
+                <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">Yes, for our Studio and Full
+                    Collections, we offer split payments through Klarna or directly via 50% deposit and 50% on
+                    completion.</p>
             </details>
-             <details class="group bg-warm dark:bg-zinc-900 p-8 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm" style="transition-delay: 0.2s;">
-                <summary class="flex justify-between items-center font-heading font-bold cursor-pointer list-none text-lg">
+            <details
+                class="group bg-warm dark:bg-zinc-900 p-8 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm"
+                style="transition-delay: 0.2s;">
+                <summary
+                    class="flex justify-between items-center font-heading font-bold cursor-pointer list-none text-lg">
                     Is shipping included in these prices?
                     <i class="bi bi-plus-lg group-open:rotate-45 transition-transform duration-300"></i>
                 </summary>
-                <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">Standard shipping is free for all Collection Bundles. For individual a la carte orders, shipping is calculated at checkout based on weight and destination.</p>
+                <p class="mt-4 text-slate-500 dark:text-slate-400 leading-relaxed">Standard shipping is free for all
+                    Collection Bundles. For individual a la carte orders, shipping is calculated at checkout based on
+                    weight and destination.</p>
             </details>
         </div>
     </section>
@@ -272,7 +314,8 @@
                         <div class="terra-icon"></div>
                         <span>TERRA</span>
                     </a>
-                    <p class="text-slate-900 dark:text-slate-200 text-sm leading-relaxed mb-6">Handmade ceramic studio dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
+                    <p class="text-slate-800 dark:text-slate-100 text-sm leading-relaxed mb-6">Handmade ceramic studio
+                        dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
                     <div class="flex gap-4">
                         <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
@@ -282,8 +325,8 @@
 
                 <!-- Links Quick -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
                         <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                         <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
                         <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
@@ -294,8 +337,8 @@
 
                 <!-- Links Customer -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Customer Care</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Customer Care</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Care Instructions</a></li>
@@ -305,16 +348,20 @@
 
                 <!-- Contact -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Visit Studio</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
-                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way, Pottery Valley, PV 8901</li>
-                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i> hello@artisanclay.com</li>
-                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234) 567-8901</li>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Visit Studio</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way,
+                            Pottery Valley, PV 8901</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i>
+                            hello@artisanclay.com</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234)
+                            567-8901</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-500 dark:text-slate-400 text-xs">
+            <div
+                class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-600 dark:text-slate-300 text-xs">
                 <p>&copy; 2026 Terra Studio. All Rights Reserved. Crafted with passion.</p>
             </div>
         </div>
@@ -325,4 +372,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Process | Terra Handmade Ceramics</title>
+    <title>Process | Terra Handmade Ceramics</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Tailwind -->
@@ -37,11 +41,12 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300">
 
     <!-- Header -->
     <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10 glass-nav">
-        <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+        <nav class="container mx-auto px-6 lg:px-12 flex items-center justify-between">
             <!-- Brand -->
             <a href="index.html" class="terra-brand" aria-label="Terra Home">
                 <div class="terra-icon"></div>
@@ -49,11 +54,12 @@
             </a>
 
             <!-- Nav Menu -->
-            <div class="hidden lg:flex items-center gap-8 font-medium tracking-wide text-sm text-slate-600 dark:text-slate-400">
+            <div
+                class="hidden lg:flex items-center gap-6 font-medium tracking-wide text-[13px] text-slate-600 dark:text-slate-400">
                 <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
                 <a href="home2.html" class="hover:text-primary transition-colors">Home 2</a>
                 <a href="about.html" class="hover:text-primary transition-colors">About</a>
-                <a href="process.html" class="text-primary border-b-2 border-primary">Our Process</a>
+                <a href="process.html" class="text-primary border-b-2 border-primary">Process</a>
                 <a href="pricing.html" class="hover:text-primary transition-colors">Pricing</a>
                 <a href="shop.html" class="hover:text-primary transition-colors">Shop</a>
                 <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
@@ -74,7 +80,8 @@
                     RTL
                 </button>
                 <!-- Hamburger -->
-                <button id="menu-toggle" class="lg:hidden p-2 text-2xl text-slate-900 dark:text-white" aria-label="Toggle Mobile Menu">
+                <button id="menu-toggle" class="lg:hidden p-2 text-2xl text-slate-900 dark:text-white"
+                    aria-label="Toggle Mobile Menu">
                     <i class="bi bi-list"></i>
                 </button>
             </div>
@@ -85,14 +92,17 @@
             <a href="#" class="mobile-nav-close" id="mobile-menu-close"><i class="bi bi-x-lg"></i></a>
             <a href="index.html" class="mobile-nav-link text-center">Home 1</a>
             <a href="home2.html" class="mobile-nav-link text-center">Home 2</a>
-            <a href="process.html" class="mobile-nav-link text-center text-primary">Our Process</a>
+            <a href="process.html" class="mobile-nav-link text-center text-primary">Process</a>
             <a href="pricing.html" class="mobile-nav-link text-center">Pricing</a>
             <a href="shop.html" class="mobile-nav-link text-center">Shop</a>
             <a href="contact.html" class="mobile-nav-link text-center">Contact</a>
-            
+
             <div class="mt-8 flex flex-col items-center gap-6 px-12">
-                <a href="signup.html" class="btn-primary py-4 px-8 w-full text-center tracking-widest uppercase text-sm">Sign Up</a>
-                <button class="rtl-toggle px-6 py-2 text-sm font-bold border border-primary/50 dark:border-white/50 rounded hover:bg-primary hover:text-white transition-all uppercase" aria-label="Toggle RTL">
+                <a href="signup.html"
+                    class="btn-primary py-4 px-8 w-full text-center tracking-widest uppercase text-sm">Sign Up</a>
+                <button
+                    class="rtl-toggle px-6 py-2 text-sm font-bold border border-primary/50 dark:border-white/50 rounded hover:bg-primary hover:text-white transition-all uppercase"
+                    aria-label="Toggle RTL">
                     RTL
                 </button>
             </div>
@@ -100,16 +110,26 @@
     </header>
 
     <!-- 1. Hero Section -->
-    <section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
+    <section class="relative h-[70vh] flex items-center justify-center overflow-hidden hero-img-container">
+        <!-- Fallback Hero Background Image -->
+        <img src="assets/images/hero1.png" alt="Studio Atmosphere" class="absolute inset-0 w-full h-full object-cover">
+
         <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-            <source src="https://cdn.pixabay.com/vimeo/349479383/clay-25254.mp4?width=1280&hash=6f3f0d48f7d9a1f5" type="video/mp4">
+            <source src="https://cdn.pixabay.com/vimeo/349479383/clay-25254.mp4?width=1280&hash=6f3f0d48f7d9a1f5"
+                type="video/mp4">
         </video>
-        <div class="absolute inset-0 bg-dark/60 backdrop-blur-[1px]"></div>
-        <div class="container relative z-10 mx-auto px-6 text-center reveal-left">
-            <h6 class="text-white/60 font-heading tracking-[0.4em] uppercase text-xs mb-4">Behind the Clay</h6>
-            <h1 class="text-4xl md:text-6xl lg:text-8xl font-heading font-bold text-white mb-6 leading-tight">Alchemy of Earth</h1>
+        <div class="bg-overlay"></div>
+
+        <div class="container relative z-10 mx-auto px-6 text-center reveal-left overlay-content">
+            <h6
+                class="text-primary dark:text-secondary font-heading tracking-[0.4em] uppercase text-sm font-semibold mb-4">
+                Behind the Clay</h6>
+            <h1 class="text-5xl lg:text-8xl font-heading font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                Alchemy of Earth</h1>
             <div class="w-32 h-1 bg-primary mx-auto mb-10"></div>
-            <p class="text-white/70 max-w-2xl mx-auto text-lg leading-relaxed font-light uppercase tracking-[0.2em]">Sourcing. Throwing. Firing. Glazing. Packing.</p>
+            <p
+                class="text-slate-900 dark:text-slate-100 max-w-2xl mx-auto text-lg leading-relaxed font-medium uppercase tracking-[0.2em]">
+                Sourcing. Throwing. Firing. Glazing. Packing.</p>
         </div>
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
             <i class="bi bi-arrow-down text-white text-2xl"></i>
@@ -120,19 +140,28 @@
     <section class="py-32 bg-white dark:bg-dark">
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="reveal-left">
-                <div class="text-6xl font-heading font-bold text-primary/10 mb-6">01</div>
-                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">The Foundation</h6>
+
+                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">The
+                    Foundation</h6>
                 <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8 leading-tight">Natural Sourcing</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">It all begins with the earth. We source our high-fire stoneware clay from local deposits in Devon, known for its exceptional plasticity and organic mineral content that reveals itself after firing.</p>
+                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">It all begins with the earth. We
+                    source our high-fire stoneware clay from local deposits in Devon, known for its exceptional
+                    plasticity and organic mineral content that reveals itself after firing.</p>
                 <ul class="space-y-4 font-medium text-sm">
-                    <li class="flex items-center gap-3"><i class="bi bi-dot text-primary text-4xl"></i> Pure Mineral Composition</li>
-                    <li class="flex items-center gap-3"><i class="bi bi-dot text-primary text-4xl"></i> Sustainable Mining Practices</li>
-                    <li class="flex items-center gap-3"><i class="bi bi-dot text-primary text-4xl"></i> Multi-level Wedge Process</li>
+                    <li class="flex items-center gap-3"><i class="bi bi-dot text-primary text-4xl"></i> Pure Mineral
+                        Composition</li>
+                    <li class="flex items-center gap-3"><i class="bi bi-dot text-primary text-4xl"></i> Sustainable
+                        Mining Practices</li>
+                    <li class="flex items-center gap-3"><i class="bi bi-dot text-primary text-4xl"></i> Multi-level
+                        Wedge Process</li>
                 </ul>
             </div>
-            <div class="relative reveal-right">
-                <img src="assets/images/ceramic-art1.png" alt="Raw Clay" class="w-full h-auto shadow-2xl relative z-10 scale-105">
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/30 dark:bg-primary/10 rounded-full blur-3xl"></div>
+            <div class="relative reveal-right flex justify-center">
+                <img src="https://images.pexels.com/photos/6693566/pexels-photo-6693566.jpeg" alt="Raw Clay"
+                    class="max-w-[480px] w-full h-auto shadow-2xl relative z-10 scale-105">
+                <div
+                    class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/30 dark:bg-primary/10 rounded-full blur-3xl">
+                </div>
             </div>
         </div>
     </section>
@@ -140,15 +169,21 @@
     <!-- 3. Step 2: The Throw -->
     <section class="py-32 bg-warm dark:bg-zinc-900 border-y border-primary/5">
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="order-2 lg:order-1 relative reveal-left">
-                <img src="assets/images/hero2.png" alt="Throwing Wheel" class="w-full h-auto shadow-2xl relative z-10 translate-x-4">
-                <div class="absolute inset-0 border-8 border-primary/10 -translate-x-8 translate-y-8"></div>
+            <div class="order-2 lg:order-1 relative reveal-left flex justify-center lg:justify-start">
+                <img src="assets/images/hero2.png" alt="Throwing Wheel"
+                    class="max-w-[480px] w-full h-auto shadow-2xl relative z-10 lg:translate-x-4">
+                <div
+                    class="absolute inset-0 max-w-[480px] border-8 border-primary/10 -translate-x-8 translate-y-8 hidden lg:block">
+                </div>
             </div>
             <div class="order-1 lg:order-2 reveal-right">
-                <div class="text-6xl font-heading font-bold text-primary/10 mb-6">02</div>
-                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">The Rhythm</h6>
+
+                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">The Rhythm
+                </h6>
                 <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8 leading-tight">Masterful Throwing</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">The hands are the primary tools. Using a classic wooden kick-wheel, the artisan centers the clay and coaxes it into its intended form. Every movement is a conversation between the potter and the material.</p>
+                <p class="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">The hands are the primary tools.
+                    Using a classic wooden kick-wheel, the artisan centers the clay and coaxes it into its intended
+                    form. Every movement is a conversation between the potter and the material.</p>
                 <div class="bg-white/50 dark:bg-dark/50 p-8 border-l-4 border-primary italic text-slate-500 font-light">
                     "Centering is a meditative state. If the potter isn't centered, the clay never will be."
                 </div>
@@ -159,17 +194,29 @@
     <!-- 4. Step 3: Science & Mineral -->
     <section class="py-32 bg-white dark:bg-dark">
         <div class="container mx-auto px-6 lg:px-12 flex flex-col items-center text-center">
-             <div class="reveal-left max-w-3xl mb-20">
-                <div class="text-6xl font-heading font-bold text-primary/10 mb-6">03</div>
-                <h6 class="text-accent font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">The Transformation</h6>
-                <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8 leading-tight">Glazing & Mineral Science</h2>
-                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Our glazes are mixed from scratch using oxides, wood ash, and feldspar. We avoid industrial chemical stabilizers, preferring the unpredictable beauty of natural mineral reactions during the final firing.</p>
+            <div class="reveal-left max-w-3xl mb-20">
+
+                <h6 class="text-accent font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">The
+                    Transformation</h6>
+                <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8 leading-tight">Glazing & Mineral Science
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Our glazes are mixed from scratch using
+                    oxides, wood ash, and feldspar. We avoid industrial chemical stabilizers, preferring the
+                    unpredictable beauty of natural mineral reactions during the final firing.</p>
             </div>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
-                <div class="aspect-square bg-slate-100 reveal-left overflow-hidden"><img src="assets/images/product-plates.png" class="w-full h-full object-cover"></div>
-                <div class="aspect-square bg-slate-200 reveal-left overflow-hidden" style="transition-delay: 0.1s;"><img src="assets/images/about-image.png" class="w-full h-full object-cover"></div>
-                <div class="aspect-square bg-slate-100 reveal-left overflow-hidden" style="transition-delay: 0.2s;"><img src="assets/images/category-mugs.png" class="w-full h-full object-cover"></div>
-                <div class="aspect-square bg-slate-200 reveal-left overflow-hidden" style="transition-delay: 0.3s;"><img src="assets/images/hero1.png" class="w-full h-full object-cover"></div>
+                <div class="aspect-square bg-slate-100 reveal-left overflow-hidden"><img
+                        src="https://images.pexels.com/photos/18659844/pexels-photo-18659844.jpeg"
+                        class="w-full h-full object-cover"></div>
+                <div class="aspect-square bg-slate-200 reveal-left overflow-hidden" style="transition-delay: 0.1s;"><img
+                        src="https://images.pexels.com/photos/34789184/pexels-photo-34789184.jpeg"
+                        class="w-full h-full object-cover"></div>
+                <div class="aspect-square bg-slate-100 reveal-left overflow-hidden" style="transition-delay: 0.2s;"><img
+                        src="https://images.pexels.com/photos/28867382/pexels-photo-28867382.jpeg"
+                        class="w-full h-full object-cover"></div>
+                <div class="aspect-square bg-slate-200 reveal-left overflow-hidden" style="transition-delay: 0.3s;"><img
+                        src="https://images.pexels.com/photos/6611423/pexels-photo-6611423.jpeg"
+                        class="w-full h-full object-cover"></div>
             </div>
         </div>
     </section>
@@ -180,25 +227,38 @@
         <div class="container mx-auto px-6 lg:px-12 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-end">
                 <div class="reveal-left">
-                    <div class="text-6xl font-heading font-bold text-white/10 mb-6">04+05</div>
-                    <h2 class="text-3xl lg:text-7xl font-heading font-bold mb-10 leading-tight">Through the Fire & Beyond</h2>
+
+                    <h2 class="text-3xl lg:text-7xl font-heading font-bold mb-10 leading-tight">Through the Fire &
+                        Beyond</h2>
                     <div class="space-y-12">
                         <div>
-                            <h4 class="text-xl font-bold mb-4 flex items-center gap-4"><i class="bi bi-fire"></i> Double Firing</h4>
-                            <p class="text-white/70 leading-relaxed">A 900°C bisque firing followed by a 1250°C glaze firing vitrifies the stoneware, making it non-porous, dishwasher safe, and unbelievably durable.</p>
+                            <h4 class="text-xl font-bold mb-4 flex items-center gap-4"><i class="bi bi-fire"></i> Double
+                                Firing</h4>
+                            <p class="text-white/70 leading-relaxed">A 900°C bisque firing followed by a 1250°C glaze
+                                firing vitrifies the stoneware, making it non-porous, dishwasher safe, and unbelievably
+                                durable.</p>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-4 flex items-center gap-4"><i class="bi bi-box-seam"></i> Sustainable Curation</h4>
-                            <p class="text-white/70 leading-relaxed">Each piece is hand-dried for 48 hours before being wrapped in 100% biodegradable honey-comb paper and recycled card for its journey to your table.</p>
+                            <h4 class="text-xl font-bold mb-4 flex items-center gap-4"><i class="bi bi-box-seam"></i>
+                                Sustainable Curation</h4>
+                            <p class="text-white/70 leading-relaxed">Each piece is hand-dried for 48 hours before being
+                                wrapped in 100% biodegradable honey-comb paper and recycled card for its journey to your
+                                table.</p>
                         </div>
                     </div>
                 </div>
                 <div class="reveal-right">
                     <div class="bg-white p-12 text-dark shadow-2xl relative">
-                        <div class="terra-icon scale-125 mb-8"></div>
+                        <div class="terra-brand !text-dark !mb-8" style="font-size: 1.5rem;">
+                            <div class="terra-icon scale-125"></div>
+                            <span>TERRA</span>
+                        </div>
                         <h4 class="text-2xl font-bold mb-6">Ready to Experience?</h4>
-                        <p class="text-slate-500 mb-10">Now that you've seen the alchemy, explore the finished collections in our studio shop.</p>
-                        <a href="shop.html" class="btn-primary py-4 px-10 inline-block text-xs font-bold tracking-widest uppercase w-full text-center">Visit Collection</a>
+                        <p class="text-slate-500 mb-10">Now that you've seen the alchemy, explore the finished
+                            collections in our studio shop.</p>
+                        <a href="shop.html"
+                            class="btn-primary py-4 px-10 inline-block text-xs font-bold tracking-widest uppercase w-full text-center">Visit
+                            Collection</a>
                     </div>
                 </div>
             </div>
@@ -215,7 +275,8 @@
                         <div class="terra-icon"></div>
                         <span>TERRA</span>
                     </a>
-                    <p class="text-slate-900 dark:text-slate-200 text-sm leading-relaxed mb-6">Handmade ceramic studio dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
+                    <p class="text-slate-800 dark:text-slate-100 text-sm leading-relaxed mb-6">Handmade ceramic studio
+                        dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
                     <div class="flex gap-4">
                         <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
@@ -225,8 +286,8 @@
 
                 <!-- Links Quick -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
                         <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                         <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
                         <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
@@ -237,8 +298,8 @@
 
                 <!-- Links Customer -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Customer Care</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Customer Care</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Care Instructions</a></li>
@@ -248,16 +309,20 @@
 
                 <!-- Contact -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6">Visit Studio</h4>
-                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
-                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way, Pottery Valley, PV 8901</li>
-                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i> hello@artisanclay.com</li>
-                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234) 567-8901</li>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Visit Studio</h4>
+                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way,
+                            Pottery Valley, PV 8901</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i>
+                            hello@artisanclay.com</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234)
+                            567-8901</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-500 dark:text-slate-400 text-xs">
+            <div
+                class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-600 dark:text-slate-300 text-xs">
                 <p>&copy; 2026 Terra Studio. All Rights Reserved. Crafted with passion.</p>
             </div>
         </div>
@@ -268,4 +333,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
