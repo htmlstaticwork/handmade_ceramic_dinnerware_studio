@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Terra Handmade Ceramics</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C4A3A',
+                        secondary: '#F5F5DC',
+                        accent: '#B45E42',
+                        dark: '#1A1A1A',
+                        light: '#FDFBF8',
+                        warm: '#F5EBE0'
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10">
+        <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="index.html" class="terra-brand" aria-label="Terra Home">
+                <div class="terra-icon"></div>
+                <span>TERRA</span>
+            </a>
+
+            <!-- Nav Menu -->
+            <div class="hidden md:flex items-center gap-8 font-medium tracking-wide text-sm text-slate-600 dark:text-slate-400">
+                <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
+                <a href="home2.html" class="hover:text-primary transition-colors">Home 2</a>
+                <a href="about.html" class="text-primary border-b-2 border-primary">About</a>
+                <a href="shop.html" class="hover:text-primary transition-colors">Shop</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- Utility Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="signup.html" class="hidden sm:inline-block btn-primary py-2 px-6 text-sm">Sign Up</a>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-lg" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button id="rtl-toggle" class="hidden sm:inline-block px-2 py-1 text-xs font-bold border border-primary/50 rounded hover:bg-primary hover:text-white transition-all uppercase" aria-label="Toggle RTL">
+                    RTL
+                </button>
+                <!-- Hamburger -->
+                <button id="menu-toggle" class="md:hidden p-2 text-2xl text-slate-900 dark:text-white" aria-label="Toggle Mobile Menu">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu" class="md:hidden">
+            <a href="index.html" class="mobile-nav-link">Home 1</a>
+            <a href="home2.html" class="mobile-nav-link">Home 2</a>
+            <a href="about.html" class="mobile-nav-link text-primary">About</a>
+            <a href="shop.html" class="mobile-nav-link">Shop</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            
+            <div class="mt-8 flex gap-6">
+                <a href="signup.html" class="btn-primary py-3 px-8">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center pt-32 pb-24 bg-white dark:bg-dark overflow-hidden hero-img-container">
+        <!-- Background Image -->
+        <img src="https://images.pexels.com/photos/4046710/pexels-photo-4046710.jpeg" alt="Pottery Background" class="hero-img absolute inset-0">
+        <div class="bg-overlay"></div>
+
+        <div class="container mx-auto px-6 lg:px-12 relative z-10">
+            <div class="max-w-4xl mx-auto text-center overlay-content">
+                <h6 class="text-primary dark:text-secondary font-heading tracking-[0.2em] mb-4 text-sm font-semibold uppercase reveal-left">Over 12 Years of Craft</h6>
+                <h1 class="text-5xl lg:text-8xl font-heading font-bold mb-8 text-slate-900 dark:text-white reveal-left" style="transition-delay: 0.1s;">The Hands Behind the Clay.</h1>
+                <p class="text-slate-800 dark:text-slate-200 text-xl leading-relaxed max-w-2xl mx-auto font-medium reveal-left" style="transition-delay: 0.2s;">Terra was born from a desire to slow down. Each piece is hand-thrown in our sunny studio, where we embrace the imperfections that make handmade ceramics so special.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. The Studio Story -->
+    <section class="py-24 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2 h-[600px] reveal-left">
+                <img src="assets/images/about.png" alt="Studio" class="w-full h-full object-cover rounded-sm border border-primary/10">
+            </div>
+            <div class="md:w-1/2 reveal-left" style="transition-delay: 0.2s;">
+                <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-8">Founded in 2011, grown with passion.</h2>
+                <div class="space-y-6 text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                    <p>What started as a small personal project in a damp garage has evolved into a fully functional ceramics studio. My name is Julianne, and I've spent the last 15 years perfecting the balance between clay, water, and heat.</p>
+                    <p>Artisan Clay was born out of a desire for dinnerware that feels like it belongs in the palm of your hand, not just in a cabinet. Every fingerprint, every texture, and every glaze drip is intentional—a celebration of the human touch.</p>
+                    <p>Today, our studio employs three local artisans and provides mentorship programs for emerging ceramicists in the community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Our Philosophy / Mission -->
+    <section class="py-24 bg-secondary/10 dark:bg-zinc-900">
+        <div class="container mx-auto px-6 lg:px-12 text-center">
+            <h6 class="text-primary font-heading tracking-[0.3em] mb-6 text-xs font-semibold uppercase fade-in">The Core Pillars</h6>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-white dark:bg-dark p-10 border border-primary/10 dark:border-white/5 reveal-left hover:shadow-2xl transition-all duration-500 rounded-sm text-center">
+                    <h3 class="font-heading font-bold text-2xl mb-6 text-slate-900 dark:text-white">Honesty</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">We don't hide the natural color of the clay or the marks of the wheel. Honesty in material is honesty in art.</p>
+                </div>
+                <!-- Pillar 2 -->
+                <div class="bg-white dark:bg-dark p-10 border border-primary/10 dark:border-white/5 reveal-left hover:shadow-2xl transition-all duration-500 rounded-sm text-center" style="transition-delay: 0.1s;">
+                    <h3 class="font-heading font-bold text-2xl mb-6 text-slate-900 dark:text-white">Sustainability</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">We recycle 100% of our clay scraps and use electric kilns powered by solar grids to minimize impact.</p>
+                </div>
+                <!-- Pillar 3 -->
+                <div class="bg-white dark:bg-dark p-10 border border-primary/10 dark:border-white/5 reveal-left hover:shadow-2xl transition-all duration-500 rounded-sm text-center" style="transition-delay: 0.2s;">
+                    <h3 class="font-heading font-bold text-2xl mb-6 text-slate-900 dark:text-white">Durability</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Functional art should LAST. Our stoneware is high-fired to over 2200°F for extreme chip resistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Meet the Artist -->
+    <section class="py-24 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row-reverse items-center gap-16">
+            <div class="reveal-left" style="transition-delay: 0.1s;">
+                <div class="relative h-[480px] max-w-sm mx-auto overflow-hidden rounded-sm shadow-2xl">
+                    <img src="https://images.pexels.com/photos/3777550/pexels-photo-3777550.jpeg" alt="Julianne Vance" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="md:w-2/3 reveal-left" style="transition-delay: 0.2s;">
+                <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-8">Julianne Vance <span class="text-lg font-light text-primary block mt-2 uppercase tracking-widest">Founder & Creative Lead</span></h2>
+                <p class="text-slate-500 dark:text-slate-400 text-lg mb-10 leading-relaxed italic">"Clay allows me to pause. In a world of fast clicks and fast fashion, ceramics demand patience. You cannot rush the drying process, and you cannot predict the fire. It's a humble partnership with nature."</p>
+                <div class="flex items-center gap-8">
+                    <div>
+                        <h4 class="font-bold text-xl font-heading text-slate-900 dark:text-white">2k+</h4>
+                        <p class="text-xs uppercase text-slate-400 font-bold tracking-widest">Pieces Fired</p>
+                    </div>
+                    <div class="w-px h-10 bg-primary/20"></div>
+                    <div>
+                        <h4 class="font-bold text-xl font-heading text-slate-900 dark:text-white">15</h4>
+                        <p class="text-xs uppercase text-slate-400 font-bold tracking-widest">Years Experience</p>
+                    </div>
+                    <div class="w-px h-10 bg-primary/20"></div>
+                    <div>
+                        <h4 class="font-bold text-xl font-heading text-slate-900 dark:text-white">Global</h4>
+                        <p class="text-xs uppercase text-slate-400 font-bold tracking-widest">Shipping</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Call to Action -->
+    <section class="py-24 bg-primary text-white text-center">
+        <div class="container mx-auto px-6 lg:px-12 reveal-left">
+            <h2 class="text-4xl lg:text-6xl font-heading font-bold mb-10">Own a piece of the history.</h2>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="shop.html" class="bg-secondary text-primary px-12 py-5 font-bold uppercase tracking-widest text-sm hover:scale-105 transition-all">Shop Collection</a>
+                <a href="contact.html" class="btn-secondary px-12 py-5 font-bold uppercase tracking-widest text-sm">Book a Studio Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-dark py-16 border-t border-primary/10 dark:border-white/10">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="terra-brand" aria-label="Terra Home">
+                        <div class="terra-icon"></div>
+                        <span>TERRA</span>
+                    </a>
+                    <p class="text-slate-900 dark:text-slate-200 text-sm leading-relaxed mb-6">Handmade ceramic studio dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links Quick -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
+                        <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Customer -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Customer Care</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Care Instructions</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Visit Studio</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way,
+                            Pottery Valley, PV 8901</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i>
+                            hello@artisanclay.com</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234)
+                            567-8901</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-500 dark:text-slate-400 text-xs">
+                <p>&copy; 2026 Terra Studio. All Rights Reserved. Crafted with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+    <script src="main.js"></script>
+</body>
+</html>

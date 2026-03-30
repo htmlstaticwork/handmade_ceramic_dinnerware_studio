@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Terra Handmade Ceramics</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C4A3A',
+                        secondary: '#F5F5DC',
+                        accent: '#B45E42',
+                        dark: '#1A1A1A',
+                        light: '#FDFBF8',
+                        warm: '#F5EBE0'
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10">
+        <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="index.html" class="terra-brand" aria-label="Terra Home">
+                <div class="terra-icon"></div>
+                <span>TERRA</span>
+            </a>
+
+            <!-- Nav Menu -->
+            <div class="hidden md:flex items-center gap-8 font-medium tracking-wide text-sm text-slate-600 dark:text-slate-400">
+                <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
+                <a href="home2.html" class="hover:text-primary transition-colors">Home 2</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="shop.html" class="hover:text-primary transition-colors">Shop</a>
+                <a href="contact.html" class="text-primary border-b-2 border-primary">Contact</a>
+            </div>
+
+            <!-- Utility Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="signup.html" class="hidden sm:inline-block btn-primary py-2 px-6 text-sm">Sign Up</a>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-lg" aria-label="Toggle Theme">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button id="rtl-toggle" class="hidden sm:inline-block px-2 py-1 text-xs font-bold border border-primary/50 rounded hover:bg-primary hover:text-white transition-all uppercase" aria-label="Toggle RTL">
+                    RTL
+                </button>
+                <!-- Hamburger -->
+                <button id="menu-toggle" class="md:hidden p-2 text-2xl text-slate-900 dark:text-white" aria-label="Toggle Mobile Menu">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu" class="md:hidden">
+            <a href="index.html" class="mobile-nav-link">Home 1</a>
+            <a href="home2.html" class="mobile-nav-link">Home 2</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="shop.html" class="mobile-nav-link">Shop</a>
+            <a href="contact.html" class="mobile-nav-link text-primary">Contact</a>
+            
+            <div class="mt-8 flex gap-6">
+                <a href="signup.html" class="btn-primary py-3 px-8">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="min-h-[40vh] pt-32 pb-24 flex items-center bg-white dark:bg-dark relative overflow-hidden">
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+            <h6 class="text-primary font-heading tracking-[0.3em] mb-4 text-xs font-semibold uppercase fade-in">Reach Out</h6>
+            <h1 class="text-5xl lg:text-7xl font-heading font-bold mb-8 text-slate-900 dark:text-white reveal-left">Let's connect over clay.</h1>
+            <p class="text-slate-800 dark:text-slate-200 max-w-2xl mx-auto font-light text-lg lg:text-xl leading-relaxed reveal-left" style="transition-delay: 0.2s;">Whether you have a custom commission in mind, want to visit the studio, or just have a question about our work—we'd love to hear from you.</p>
+        </div>
+        <div class="absolute -right-24 -top-24 w-96 h-96 bg-primary opacity-5 rounded-full blur-[100px]"></div>
+    </section>
+
+    <!-- 2. Contact Form & Info -->
+    <section class="py-24 bg-slate-50 dark:bg-zinc-950/50">
+        <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Card 1: Form -->
+            <div class="bg-white dark:bg-dark p-8 lg:p-12 border border-primary/5 dark:border-white/5 rounded-sm reveal-left shadow-sm">
+                <h2 class="text-3xl font-heading font-bold mb-10">Inquiry Form</h2>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold uppercase tracking-widest text-slate-400">Full Name</label>
+                            <input type="text" placeholder="Julianne Vance" class="px-6 py-4 bg-slate-50 dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 outline-none focus:ring-1 focus:ring-primary rounded-sm transition-all">
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold uppercase tracking-widest text-slate-400">Email Address</label>
+                            <input type="email" placeholder="example@studio.com" class="px-6 py-4 bg-slate-50 dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 outline-none focus:ring-1 focus:ring-primary rounded-sm transition-all">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-bold uppercase tracking-widest text-slate-400">Subject</label>
+                        <select class="px-6 py-4 bg-slate-50 dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 outline-none focus:ring-1 focus:ring-primary rounded-sm transition-all appearance-none cursor-pointer">
+                            <option>Custom Commission</option>
+                            <option>Order Support</option>
+                            <option>Studio Visit Request</option>
+                            <option>Wholesale Partnerships</option>
+                            <option>Other / General</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-bold uppercase tracking-widest text-slate-400">Message</label>
+                        <textarea rows="6" placeholder="Tell us more about your request..." class="px-6 py-4 bg-slate-50 dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 outline-none focus:ring-1 focus:ring-primary rounded-sm transition-all resize-none"></textarea>
+                    </div>
+                    <button class="btn-primary w-full py-5 text-sm font-bold uppercase tracking-widest">Send My Inquiry</button>
+                </form>
+            </div>
+            
+            <!-- Card 2: Contact Info -->
+            <div class="bg-white dark:bg-dark p-8 lg:p-12 border border-primary/5 dark:border-white/5 rounded-sm flex flex-col justify-center reveal-left shadow-sm" style="transition-delay: 0.2s;">
+                <h2 class="text-3xl font-heading font-bold mb-10">Contact Information</h2>
+                <div class="space-y-12 mb-12">
+                     <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-primary/5 dark:bg-primary/20 rounded-full flex items-center justify-center text-primary text-2xl flex-shrink-0">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-lg mb-2">The Studio</h4>
+                            <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">123 Ceramic Way, Pottery Valley, PV 8901 <br>United Kingdom</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-primary/5 dark:bg-primary/20 rounded-full flex items-center justify-center text-primary text-2xl flex-shrink-0">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-lg mb-2">Email Support</h4>
+                            <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">General: hello@artisanclay.com <br>Wholesale: studio@artisanclay.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-primary/5 dark:bg-primary/20 rounded-full flex items-center justify-center text-primary text-2xl flex-shrink-0">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-heading font-bold text-lg mb-2">Speak to Us</h4>
+                            <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-sm">Mon-Fri | 9:00 - 18:00 <br>+1 (234) 567-8901</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-6">
+                    <a href="#" class="social-icon-premium" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="social-icon-premium" aria-label="Twitter X"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" class="social-icon-premium" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Studio Location (Map) -->
+    <section class="py-12 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="relative w-full h-[500px] bg-slate-200 dark:bg-zinc-800 rounded-sm overflow-hidden reveal-left">
+                <!-- Google Maps Embed (Generic Location for Potter Valley) -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019297806741!2d-122.419415484682!3d37.7749295797593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f248df511%3A0x70b36df270cc68!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1614123456789!5m2!1sen!2sus" 
+                    width="100%" height="100%" style="border:0; filter: grayscale(1) contrast(1.2) opacity(0.8);" allowfullscreen="" loading="lazy"></iframe>
+                
+                <div class="absolute inset-y-0 left-0 lg:left-12 flex items-center pointer-events-none">
+                    <div class="bg-white/95 dark:bg-dark/95 backdrop-blur-sm p-8 rounded-sm shadow-2xl text-center border border-primary/20 reveal-left pointer-events-auto max-w-xs scale-90 lg:scale-100">
+                        <div class="terra-icon mx-auto mb-4 scale-125"></div>
+                        <h4 class="font-heading font-bold text-lg mb-2">Find Us Here</h4>
+                        <p class="text-xs text-slate-500 mb-6 uppercase tracking-widest font-bold">Pottery Valley, PV 8901</p>
+                        <a href="https://maps.google.com" target="_blank" class="text-primary font-bold text-sm border-b-2 border-primary pb-1">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FAQ / Preparation -->
+    <section class="py-24 bg-light dark:bg-zinc-900">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold">Planning a visit?</h2>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-6">
+                 <details class="group bg-white dark:bg-dark p-6 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm">
+                    <summary class="flex justify-between items-center font-heading font-bold cursor-pointer list-none">
+                        Do I need an appointment for studio visits?
+                        <i class="bi bi-plus-lg group-open:rotate-45 transition-transform duration-300"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-500 text-sm leading-relaxed">Yes, for personalized consultations or picking up orders, we recommend booking at least 48 hours in advance through the form above.</p>
+                </details>
+                 <details class="group bg-white dark:bg-dark p-6 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm" style="transition-delay: 0.1s;">
+                    <summary class="flex justify-between items-center font-heading font-bold cursor-pointer list-none">
+                        Can I try the pottery wheel during my visit?
+                        <i class="bi bi-plus-lg group-open:rotate-45 transition-transform duration-300"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-500 text-sm leading-relaxed">Wheel sessions are exclusive to our weekend workshops. Please check our workshop schedule for availability.</p>
+                </details>
+                 <details class="group bg-white dark:bg-dark p-6 border border-slate-100 dark:border-zinc-800 reveal-left shadow-sm" style="transition-delay: 0.2s;">
+                    <summary class="flex justify-between items-center font-heading font-bold cursor-pointer list-none">
+                        Is parking available on site?
+                        <i class="bi bi-plus-lg group-open:rotate-45 transition-transform duration-300"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-500 text-sm leading-relaxed">Yes, we have a small customer parking area at the front of the studio.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-dark py-16 border-t border-primary/10 dark:border-white/10">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="terra-brand" aria-label="Terra Home">
+                        <div class="terra-icon"></div>
+                        <span>TERRA</span>
+                    </a>
+                    <p class="text-slate-900 dark:text-slate-200 text-sm leading-relaxed mb-6">Handmade ceramic studio dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links Quick -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
+                        <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Customer -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Customer Care</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Care Instructions</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Visit Studio</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way,
+                            Pottery Valley, PV 8901</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i>
+                            hello@artisanclay.com</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234)
+                            567-8901</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-500 dark:text-slate-400 text-xs">
+                <p>&copy; 2026 Terra Studio. All Rights Reserved. Crafted with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+    <script src="main.js"></script>
+</body>
+</html>

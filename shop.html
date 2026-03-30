@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Terra Premium Ceramics</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C4A3A',
+                        secondary: '#F5F5DC',
+                        accent: '#B45E42',
+                        dark: '#1A1A1A',
+                        light: '#FDFBF8',
+                        warm: '#F5EBE0'
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10">
+        <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="index.html" class="terra-brand" aria-label="Terra Home">
+                <div class="terra-icon"></div>
+                <span>TERRA</span>
+            </a>
+
+            <!-- Nav Menu -->
+            <div
+                class="hidden md:flex items-center gap-8 font-medium tracking-wide text-sm text-slate-600 dark:text-slate-400">
+                <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
+                <a href="home2.html" class="hover:text-primary transition-colors">Home 2</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="shop.html" class="text-primary border-b-2 border-primary">Shop</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- Utility Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="signup.html" class="hidden sm:inline-block btn-primary py-2 px-6 text-sm">Sign Up</a>
+                <button id="theme-toggle"
+                    class="p-2 rounded-full hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-lg"
+                    aria-label="Toggle Theme">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button id="rtl-toggle"
+                    class="hidden sm:inline-block px-2 py-1 text-xs font-bold border border-primary/50 rounded hover:bg-primary hover:text-white transition-all uppercase"
+                    aria-label="Toggle RTL">
+                    RTL
+                </button>
+                <!-- Hamburger -->
+                <button id="menu-toggle" class="md:hidden p-2 text-2xl text-slate-900 dark:text-white" aria-label="Toggle Mobile Menu">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu" class="md:hidden">
+            <a href="index.html" class="mobile-nav-link">Home 1</a>
+            <a href="home2.html" class="mobile-nav-link">Home 2</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="shop.html" class="mobile-nav-link text-primary">Shop</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            
+            <div class="mt-8 flex gap-6">
+                <a href="signup.html" class="btn-primary py-3 px-8">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="relative h-[50vh] flex items-center justify-center overflow-hidden hero-img-container">
+        <img src="assets/images/plates.png" alt="Shop Collection" class="hero-img absolute inset-0">
+        <div class="bg-overlay"></div>
+        <div class="relative z-10 text-center text-slate-900 dark:text-white px-6 overlay-content">
+            <h1 class="text-5xl lg:text-7xl font-heading font-bold mb-4 reveal-left">The Studio Shop</h1>
+            <p class="text-slate-800 dark:text-slate-200 max-w-lg mx-auto font-medium lg:text-lg reveal-left"
+                style="transition-delay: 0.2s;">Thoughtfully made, forever cherished. Explore our full collection of
+                stoneware.</p>
+        </div>
+    </section>
+
+    <!-- 2. Filters & Categories -->
+    <section class="py-12 bg-white dark:bg-zinc-900 border-b border-primary/5">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex gap-4 overflow-x-auto pb-4 md:pb-0 scrollbar-hide no-scrollbar" id="category-filters">
+                <button class="filter-btn active px-8 py-2 bg-primary text-white text-sm font-bold tracking-widest uppercase flex-shrink-0" data-category="all">All Pieces</button>
+                <button class="filter-btn px-8 py-2 bg-slate-100 dark:bg-dark text-slate-500 text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors flex-shrink-0" data-category="Plates">Plates</button>
+                <button class="filter-btn px-8 py-2 bg-slate-100 dark:bg-dark text-slate-500 text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors flex-shrink-0" data-category="Bowls">Bowls</button>
+                <button class="filter-btn px-8 py-2 bg-slate-100 dark:bg-dark text-slate-500 text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors flex-shrink-0" data-category="Mugs">Mugs</button>
+                <button class="filter-btn px-8 py-2 bg-slate-100 dark:bg-dark text-slate-500 text-sm font-bold tracking-widest uppercase hover:bg-primary/10 transition-colors flex-shrink-0" data-category="Serving">Serving</button>
+            </div>
+            <div class="flex items-center gap-6 w-full md:w-auto">
+                <select
+                    class="bg-slate-50 dark:bg-dark border border-slate-200 dark:border-zinc-700 px-4 py-2 text-sm focus:ring-1 focus:ring-primary outline-none">
+                    <option>Sort by: Newest</option>
+                    <option>Sort by: Price (Low to High)</option>
+                    <option>Sort by: Price (High to Low)</option>
+                    <option>Sort by: Popularity</option>
+                </select>
+                <p class="text-xs text-slate-400 uppercase tracking-widest hidden lg:block">Showing 12 of 48 items</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Product Grid -->
+    <section class="py-16 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-16">
+                <!-- Products will be rendered here by JavaScript -->
+            </div>
+
+            <script>
+                const products = [
+                    { name: "Clay Rim Dinner Plate", price: 45.00, img: "https://images.pexels.com/photos/34173322/pexels-photo-34173322.jpeg", badge: "Bestseller", category: "Plates" },
+                    { name: "Organic Earth Bowl", price: 38.00, img: "https://images.pexels.com/photos/20208729/pexels-photo-20208729.jpeg", badge: null, category: "Bowls" },
+                    { name: "Studio Stone Mug", price: 28.00, img: "https://images.pexels.com/photos/7473923/pexels-photo-7473923.jpeg", badge: "New", category: "Mugs" },
+                    { name: "Kiln-Fire Soup Set", price: 120.00, img: "https://images.pexels.com/photos/34326231/pexels-photo-34326231.jpeg", badge: null, category: "Serving" },
+                    { name: "Matte Slate Plate", price: 42.00, img: "https://images.pexels.com/photos/3847409/pexels-photo-3847409.jpeg", badge: null, category: "Plates" },
+                    { name: "Textured Oat Bowl", price: 34.00, img: "https://images.pexels.com/photos/35074683/pexels-photo-35074683.jpeg", badge: null, category: "Bowls" },
+                    { name: "Clay Tea Cup", price: 24.00, img: "https://images.pexels.com/photos/6945265/pexels-photo-6945265.jpeg", badge: null, category: "Mugs" },
+                    { name: "Serving Artisan Tray", price: 155.00, img: "https://images.pexels.com/photos/34733198/pexels-photo-34733198.jpeg", badge: "Rare", category: "Serving" },
+                    { name: "Cream Pasta Plate", price: 48.00, img: "https://images.pexels.com/photos/34326231/pexels-photo-34326231.jpeg", badge: null, category: "Plates" },
+                    { name: "Deep Forest Bowl", price: 42.00, img: "https://images.pexels.com/photos/7473923/pexels-photo-7473923.jpeg", badge: "Popular", category: "Bowls" },
+                    { name: "Rough Clay Tankard", price: 35.00, img: "https://images.pexels.com/photos/34733198/pexels-photo-34733198.jpeg", badge: null, category: "Mugs" },
+                    { name: "Ceramic Spoon Rest", price: 18.00, img: "https://images.pexels.com/photos/4226876/pexels-photo-4226876.jpeg", badge: null, category: "Serving" }
+                ];
+
+                function renderProducts(filter = 'all') {
+                    const grid = document.getElementById('product-grid');
+                    grid.innerHTML = '';
+                    
+                    const filtered = filter === 'all' 
+                        ? products 
+                        : products.filter(p => p.category === filter);
+
+                    filtered.forEach((p, i) => {
+                        const productEl = document.createElement('div');
+                        productEl.className = 'group reveal-left';
+                        productEl.style.transitionDelay = `${i * 0.05}s`;
+                        productEl.innerHTML = `
+                            <div class="relative overflow-hidden aspect-[4/5] mb-6 bg-slate-50 dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800">
+                                <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                ${p.badge ? `<div class="absolute top-4 left-4 bg-primary text-white text-[10px] px-2 py-1 tracking-widest uppercase font-bold">${p.badge}</div>` : ''}
+                                <button class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white text-primary px-10 py-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-400 hover:bg-primary hover:text-white font-bold text-xs tracking-widest uppercase border border-primary/10">Add to Cart</button>
+                            </div>
+                            <div class="text-center">
+                                <h3 class="font-heading font-semibold text-lg hover:text-primary transition-colors cursor-pointer">${p.name}</h3>
+                                <p class="text-primary font-bold mt-1">$${p.price.toFixed(2)}</p>
+                            </div>
+                        `;
+                        grid.appendChild(productEl);
+                    });
+                }
+
+                // Initial render
+                renderProducts();
+
+                // Filter logic
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        // Update UI
+                        document.querySelectorAll('.filter-btn').forEach(b => {
+                            b.classList.remove('active', 'bg-primary', 'text-white');
+                            b.classList.add('bg-slate-100', 'dark:bg-dark', 'text-slate-500');
+                        });
+                        btn.classList.add('active', 'bg-primary', 'text-white');
+                        btn.classList.remove('bg-slate-100', 'dark:bg-dark', 'text-slate-500');
+
+                        // Filter products
+                        renderProducts(btn.dataset.category);
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- 4. Pagination / Load More -->
+    <section class="pb-24 pt-8 bg-white dark:bg-dark text-center">
+        <button
+            class="btn-secondary px-16 py-4 font-bold tracking-[0.2em] uppercase text-sm hover:translate-y-0 active:scale-95">Load
+            More Gallery Pieces</button>
+        <div class="mt-12 flex justify-center items-center gap-4">
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center border border-primary text-primary font-bold">1</a>
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center hover:border-primary text-slate-400 hover:text-primary transition-all">2</a>
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center hover:border-primary text-slate-400 hover:text-primary transition-all">3</a>
+            <span class="text-slate-300">...</span>
+            <a href="#"
+                class="w-10 h-10 flex items-center justify-center hover:border-primary text-slate-400 hover:text-primary transition-all">8</a>
+        </div>
+    </section>
+
+    <!-- 5. Artisan Values / Benefits -->
+    <section class="py-24 bg-primary text-white">
+        <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="flex flex-col items-center text-center reveal-left">
+                <i class="bi bi-hand-thumbs-up text-4xl mb-6 opacity-80"></i>
+                <h4 class="font-heading font-bold text-lg mb-2">Handmade Excellence</h4>
+                <p class="text-white/70 text-sm">Each piece is crafted by human hands, ensuring no two are ever the
+                    same.</p>
+            </div>
+            <div class="flex flex-col items-center text-center reveal-left" style="transition-delay: 0.1s;">
+                <i class="bi bi-flower1 text-4xl mb-6 opacity-80"></i>
+                <h4 class="font-heading font-bold text-lg mb-2">Earth-Friendly Glazes</h4>
+                <p class="text-white/70 text-sm">Lead-free and food-safe. Our glazes use natural minerals for depth of
+                    color.</p>
+            </div>
+            <div class="flex flex-col items-center text-center reveal-left" style="transition-delay: 0.2s;">
+                <i class="bi bi-truck text-4xl mb-6 opacity-80"></i>
+                <h4 class="font-heading font-bold text-lg mb-2">Fragile-Safe Shipping</h4>
+                <p class="text-white/70 text-sm">Expertly packed using biodegradable materials to arrive in perfect
+                    condition.</p>
+            </div>
+            <div class="flex flex-col items-center text-center reveal-left" style="transition-delay: 0.3s;">
+                <i class="bi bi-arrow-repeat text-4xl mb-6 opacity-80"></i>
+                <h4 class="font-heading font-bold text-lg mb-2">Artisan Support</h4>
+                <p class="text-white/70 text-sm">Your purchase directly funds my studio apprenticeships for local
+                    students.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-dark py-16 border-t border-primary/10 dark:border-white/10">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="terra-brand" aria-label="Terra Home">
+                        <div class="terra-icon"></div>
+                        <span>TERRA</span>
+                    </a>
+                    <p class="text-slate-900 dark:text-slate-200 text-sm leading-relaxed mb-6">Handmade ceramic studio
+                        dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links Quick -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
+                        <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Customer -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Customer Care</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Care Instructions</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Visit Studio</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way,
+                            Pottery Valley, PV 8901</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i>
+                            hello@artisanclay.com</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234)
+                            567-8901</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-500 dark:text-slate-400 text-xs">
+                <p>&copy; 2026 Terra Studio. All Rights Reserved. Crafted with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Terra Handmade Ceramics</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C4A3A',
+                        secondary: '#F5F5DC',
+                        accent: '#B45E42',
+                        dark: '#1A1A1A',
+                        light: '#FDFBF8',
+                        warm: '#F5EBE0'
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300 min-h-screen flex flex-col justify-center relative overflow-x-hidden overflow-y-auto">
+
+    <!-- Top Right Controls -->
+    <div class="absolute top-6 right-6 flex items-center gap-4 z-50">
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-lg" aria-label="Toggle Theme">
+            <i class="bi bi-moon-fill"></i>
+        </button>
+        <button id="rtl-toggle" class="px-3 py-1 text-xs font-bold border border-primary/50 rounded hover:bg-primary hover:text-white transition-all uppercase" aria-label="Toggle RTL">
+            RTL
+        </button>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10 py-12">
+        <div class="max-w-md mx-auto bg-white dark:bg-zinc-900 shadow-2xl overflow-hidden reveal-left rounded-sm border border-primary/10 dark:border-white/5">
+            <div class="p-8 lg:p-12">
+                <!-- Logo -->
+                <div class="flex justify-center mb-8">
+                    <a href="index.html" class="flex items-center" aria-label="Terra Home">
+                        <div class="terra-icon scale-125"></div>
+                    </a>
+                </div>
+                
+                <h2 class="text-3xl font-heading font-bold mb-2 text-center text-primary">Join the Studio</h2>
+                <p class="text-slate-500 dark:text-slate-400 text-sm text-center mb-8">Create your account to start your collection</p>
+                
+                <form class="space-y-5">
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">Full Name</label>
+                        <input type="text" placeholder="Julianne Vance" class="px-5 py-3 bg-slate-50 dark:bg-dark border border-slate-100 dark:border-zinc-800 outline-none focus:ring-1 focus:ring-primary rounded-sm transition-all text-sm">
+                    </div>
+                    
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">Email Address</label>
+                        <input type="email" placeholder="julianne@vance.com" class="px-5 py-3 bg-slate-50 dark:bg-dark border border-slate-100 dark:border-zinc-800 outline-none focus:ring-1 focus:ring-primary rounded-sm transition-all text-sm">
+                    </div>
+                    
+                    <div class="flex flex-col gap-1.5">
+                        <label class="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-400">Password</label>
+                        <div class="relative">
+                            <input id="password-input" type="password" placeholder="••••••••" class="w-full px-5 py-3 bg-slate-50 dark:bg-dark border border-slate-100 dark:border-zinc-800 outline-none focus:ring-1 focus:ring-primary rounded-sm transition-all text-sm">
+                            <button type="button" id="password-toggle" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors">
+                                <i class="bi bi-eye-fill"></i>
+                            </button>
+                        </div>
+                        <p class="text-[9px] text-slate-400 mt-1 uppercase tracking-widest">Min 8 characters, include a number</p>
+                    </div>
+
+                    <div class="flex items-center gap-2 py-2 text-xs">
+                        <input type="checkbox" class="w-4 h-4 rounded-sm border-slate-300 text-primary focus:ring-primary">
+                        <span class="text-slate-500 dark:text-slate-400">I agree to the <a href="#" class="text-primary hover:underline">Terms & Privacy Policy</a></span>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary w-full py-4 text-sm font-bold uppercase tracking-widest shadow-lg">Create My Account</button>
+                </form>
+
+                 <div class="relative my-8 text-center">
+                    <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-100 dark:border-zinc-800"></div></div>
+                    <span class="relative bg-white dark:bg-zinc-900 px-4 text-[10px] font-bold text-slate-300 uppercase tracking-[0.2em]">Craft Account with</span>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <button class="btn-social flex items-center justify-center gap-2 py-3 border border-slate-100 dark:border-zinc-800 rounded-sm text-xs font-bold uppercase tracking-widest">
+                        <i class="bi bi-google text-red-500"></i> Google
+                    </button>
+                    <button class="btn-social flex items-center justify-center gap-2 py-3 border border-slate-100 dark:border-zinc-800 rounded-sm text-xs font-bold uppercase tracking-widest">
+                        <i class="bi bi-apple"></i> Apple
+                    </button>
+                </div>
+                
+                <p class="text-center text-sm text-slate-500 dark:text-slate-400">
+                    Already an artisan? <a href="login.html" class="text-primary font-bold hover:underline underline-offset-4">Log In</a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Background Decoration -->
+    <div class="absolute -left-20 -top-20 w-80 h-80 bg-primary opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-secondary opacity-20 rounded-full blur-3xl"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

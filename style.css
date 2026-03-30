@@ -1,0 +1,431 @@
+/* Earthy Artisan - Main Style Configuration */
+:root {
+  --primary: #7C4A3A; /* Clay Brown */
+  --secondary: #F5F5DC; /* Beige */
+  --accent: #B45E42; /* Terracotta */
+  --light-bg: #FDFBF8;
+  --dark-bg: #1A1A1A;
+  --text-main: #2D241E;
+  --text-light: #FDFBF8;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Base resets & theme logic */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--light-bg);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dark body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+}
+
+/* Animations */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+
+/* Custom UI Components */
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 4px;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(124, 74, 58, 0.2);
+  filter: brightness(1.1);
+  letter-spacing: 0.5px;
+}
+
+.btn-secondary {
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  border-radius: 4px;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .btn-secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary);
+  color: #fff;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(124, 74, 58, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4); /* Light mode: soft white wash */
+  z-index: 1;
+}
+
+.dark .bg-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark mode: deeper shadow */
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-primary .btn-secondary, 
+.dark .btn-secondary {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.bg-primary .btn-secondary:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+/* Minimalist Artisanal Logo */
+.dark .logo-icon::after {
+  background-color: var(--secondary);
+}
+
+/* Terra Brand Identity */
+.terra-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.terra-brand span {
+  font-size: 26px; /* Optimized font size for brand impact */
+  display: block;
+}
+
+.dark .terra-brand {
+  color: var(--secondary);
+}
+
+.terra-icon {
+  width: 26px; /* Matches the visual height of the typography caps */
+  height: 26px; 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.terra-icon::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 14px;
+  border: 4.5px solid currentColor; /* Bold stroke to match font weight */
+  border-bottom-left-radius: 45% 100%;
+  border-bottom-right-radius: 45% 100%;
+  border-top: none;
+  top: 50%;
+}
+
+.terra-icon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 4.5px;
+  background-color: currentColor;
+  top: 25%;
+  border-radius: 2px;
+}
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  align-items: center;
+  justify-content: center;
+}
+
+#back-to-top:hover {
+  transform: translateY(-5px);
+  background-color: var(--accent);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+#back-to-top.show {
+  display: flex !important;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(124, 74, 58, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-icon:hover {
+  background-color: var(--primary);
+  color: #fff;
+  transform: translateY(-5px) rotate(8deg);
+  box-shadow: 0 10px 20px rgba(124, 74, 58, 0.15);
+}
+
+.dark .social-icon {
+  background-color: rgba(253, 245, 230, 0.1);
+  color: var(--secondary);
+}
+
+.dark .social-icon:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.social-icon-premium {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.dark .social-icon-premium {
+  color: var(--text-light);
+}
+
+.social-icon-premium:hover {
+  transform: scale(1.1);
+  color: var(--primary);
+  background-color: rgba(124, 74, 58, 0.05); /* Subtle highlight */
+}
+
+.dark .social-icon-premium:hover {
+  background-color: rgba(245, 245, 220, 0.05);
+}
+
+.btn-social {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-social:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-social:hover i {
+  color: #fff !important;
+}
+
+.dark .btn-social:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-color: var(--secondary);
+}
+
+
+/* Mobile Menu Drawer Styles */
+#mobile-menu {
+  position: fixed;
+  inset: 0;
+  background-color: #ffffff; /* Explicitly solid white */
+  z-index: 9999;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.dark #mobile-menu {
+  background-color: #111111; /* Explicitly solid dark */
+}
+
+#mobile-menu.active {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  transition: all 0.3s ease;
+  color: var(--text-main);
+}
+
+.dark .mobile-nav-link {
+  color: var(--text-light);
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+#menu-toggle {
+  z-index: 10000;
+}
+
+/* Scroll Prevention Hook */
+.no-scroll {
+  overflow: hidden !important;
+  max-height: 100vh !important;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+  color: var(--primary);
+}
+
+#menu-toggle {
+  z-index: 1200;
+}
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .reveal-left {
+  transform: translateX(50px);
+}
+
+[dir="rtl"] .reveal-left.active {
+  transform: translateX(0);
+}
+
+/* Glassmorphism for dark mode header */
+.dark header {
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Sticky Header */
+header {
+  top: 0;
+  z-index: 50;
+  background: rgba(253, 251, 248, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+/* Image styling & Dynamic Overlays */
+.hero-img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  transition: background-color 0.4s ease;
+  pointer-events: none;
+  z-index: 5;
+  background-color: rgba(253, 251, 248, 0.4); /* Light Mode: Light Overlay */
+}
+
+.dark .bg-overlay {
+  background-color: rgba(0, 0, 0, 0.65); /* Dark Mode: Dark Overlay */
+}
+
+.overlay-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Popups */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.popup.show {
+  display: flex;
+}

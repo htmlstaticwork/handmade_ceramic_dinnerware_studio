@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra | Handmade Ceramic Dinnerware Studio</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 40C20 65 35 80 50 80C65 80 80 65 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/><path d='M20 40C30 35 40 33 50 33C60 33 70 35 80 40' stroke='%237C4A3A' stroke-width='6' fill='none'/></svg>">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7C4A3A',
+                        secondary: '#F5F5DC',
+                        accent: '#B45E42',
+                        dark: '#1A1A1A',
+                        light: '#FDFBF8',
+                        warm: '#F5EBE0'
+                    },
+                    fontFamily: {
+                        heading: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10">
+        <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <!-- Brand -->
+            <a href="index.html" class="terra-brand" aria-label="Terra Home">
+                <div class="terra-icon"></div>
+                <span>TERRA</span>
+            </a>
+
+            <!-- Nav Menu -->
+            <div class="hidden md:flex items-center gap-8 font-medium tracking-wide text-sm">
+                <a href="index.html" class="text-primary border-b-2 border-primary">Home 1</a>
+                <a href="home2.html" class="hover:text-primary transition-colors">Home 2</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="shop.html" class="hover:text-primary transition-colors">Shop</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <!-- Utility Buttons -->
+            <div class="flex items-center gap-4">
+                <a href="signup.html" class="hidden sm:inline-block btn-primary py-2 px-6 text-sm">Sign Up</a>
+                <button id="theme-toggle"
+                    class="p-2 rounded-full hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-lg"
+                    aria-label="Toggle Theme">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+
+                <button id="rtl-toggle"
+                    class="hidden sm:inline-block px-2 py-1 text-xs font-bold border border-primary/50 rounded hover:bg-primary hover:text-white transition-all uppercase"
+                    aria-label="Toggle RTL">
+                    RTL
+                </button>
+
+                <!-- Hamburger (Mobile Only) -->
+                <button id="menu-toggle" class="md:hidden p-2 text-2xl text-slate-900 dark:text-white" aria-label="Toggle Mobile Menu">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu" class="md:hidden">
+            <a href="index.html" class="mobile-nav-link text-primary">Home 1</a>
+            <a href="home2.html" class="mobile-nav-link">Home 2</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="shop.html" class="mobile-nav-link">Shop</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            
+            <div class="mt-8 flex gap-6">
+                <a href="signup.html" class="btn-primary py-3 px-8">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="relative h-screen flex items-center overflow-hidden hero-img-container">
+        <img src="assets/images/hero1.png" alt="Handmade ceramics" class="hero-img absolute inset-0">
+        <div class="bg-overlay"></div>
+
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 overlay-content text-center">
+            <div class="max-w-3xl mx-auto reveal-left">
+                <h6
+                    class="text-primary dark:text-secondary font-heading tracking-[0.2em] mb-4 text-sm font-semibold uppercase">
+                    The Artisan Collection</h6>
+                <h1
+                    class="text-5xl lg:text-7xl font-heading font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                    Crafted for the Soul, Styled for Life.</h1>
+                <p class="text-slate-900 dark:text-slate-100 text-lg mb-10 font-medium leading-relaxed">Discover the
+                    beauty of organic imperfections with our studio-made dinnerware, hand-thrown and kilned in the heart
+                    of the countryside.</p>
+                <div class="flex gap-4">
+                    <a href="shop.html" class="btn-primary text-base">Explore Shop</a>
+                    <a href="about.html" class="btn-secondary text-base">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Featured Products -->
+    <section class="py-24 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Curated Highlights</h2>
+                <div class="w-12 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="max-w-xl mx-auto text-slate-500 dark:text-slate-400">Hand-selected pieces from our latest fall
+                    firing, each with its own unique personality.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div class="group reveal-left" style="transition-delay: 0s;">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-warm rounded-sm">
+                        <img src="https://images.pexels.com/photos/9736509/pexels-photo-9736509.jpeg"
+                            alt="Terracotta dinner plate"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute top-4 left-4 bg-primary text-white text-[10px] px-2 py-1 tracking-widest uppercase">
+                            Bestseller</div>
+                        <button
+                            class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white text-primary px-8 py-3 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-white font-medium text-sm">Add
+                            to Cart</button>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-heading font-semibold text-lg mb-1 capitalize">Sun-Kilned Terracotta Plate</h3>
+                        <p class="text-primary font-medium">$42.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="group reveal-left" style="transition-delay: 0.2s;">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-warm rounded-sm">
+                        <img src="https://images.pexels.com/photos/6611419/pexels-photo-6611419.jpeg"
+                            alt="Cream ceramic bowl"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <button
+                            class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white text-primary px-8 py-3 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-white font-medium text-sm">Add
+                            to Cart</button>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-heading font-semibold text-lg mb-1 capitalize">Speckled Cream Bowl</h3>
+                        <p class="text-primary font-medium">$34.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="group reveal-left" style="transition-delay: 0.4s;">
+                    <div class="relative overflow-hidden aspect-square mb-6 bg-warm rounded-sm">
+                        <img src="https://images.pexels.com/photos/6611421/pexels-photo-6611421.jpeg"
+                            alt="Textured clay mug"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-white text-[10px] px-2 py-1 tracking-widest uppercase font-bold">
+                            New</div>
+                        <button
+                            class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white text-primary px-8 py-3 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-primary hover:text-white font-medium text-sm">Add
+                            to Cart</button>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-heading font-semibold text-lg mb-1 capitalize">Hand-Carved Stone Mug</h3>
+                        <p class="text-primary font-medium">$28.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="shop.html" class="btn-secondary inline-flex items-center gap-2">View All Products <i
+                        class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About the Craft (Story) -->
+    <section class="py-24 bg-light dark:bg-zinc-900 overflow-hidden">
+        <div class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-20">
+            <div class="lg:w-2/5 reveal-left">
+                <div class="relative flex justify-center">
+                    <img src="assets/images/bts.png" alt="Pottery process"
+                        class="rounded-sm shadow-2xl max-h-[500px] w-full object-cover">
+                    <div
+                        class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/80 backdrop-blur-md hidden lg:flex items-center justify-center p-4 text-center border border-primary/20 z-10">
+                        <p class="text-[10px] font-heading font-bold text-primary leading-tight">OVER 15 YEARS OF
+                            ARTISANSHIP</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-3/5">
+                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-sm font-semibold uppercase">The Maker's
+                    Story</h6>
+                <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8 leading-tight">Every piece tells a story of
+                    earth and fire.</h2>
+                <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">Our pottery is born from the clay
+                    fields of the valley, shaped by hand on a traditional wheel. We believe that dinnerware shouldn't
+                    just be functional—it should be a tactile connection to nature.</p>
+                <p class="text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">Using non-toxic, locally sourced
+                    glazes, we fire our pieces in a carbon-neutral kiln, ensuring that your home is as sustainable as it
+                    is beautiful.</p>
+                <a href="about.html" class="btn-primary px-10">Read Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Product Categories -->
+    <section class="py-24 bg-white dark:bg-dark">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Category 1 -->
+                <a href="shop.html?cat=plates"
+                    class="relative overflow-hidden group aspect-[3/4] reveal-left hero-img-container"
+                    style="transition-delay: 0s;">
+                    <img src="assets/images/plates.png" alt="Plates"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="bg-overlay"></div>
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center text-slate-900 dark:text-white overlay-content">
+                        <h3 class="text-3xl font-heading font-bold mb-2">Plates</h3>
+                        <span
+                            class="text-xs tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 text-primary dark:text-secondary">Discover
+                            More</span>
+                    </div>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="shop.html?cat=bowls"
+                    class="relative overflow-hidden group aspect-[3/4] reveal-left hero-img-container"
+                    style="transition-delay: 0.2s;">
+                    <img src="assets/images/bowls.png" alt="Bowls"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="bg-overlay"></div>
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center text-slate-900 dark:text-white overlay-content">
+                        <h3 class="text-3xl font-heading font-bold mb-2">Bowls</h3>
+                        <span
+                            class="text-xs tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 text-primary dark:text-secondary">Discover
+                            More</span>
+                    </div>
+                </a>
+
+                <!-- Category 3 -->
+                <a href="shop.html?cat=mugs"
+                    class="relative overflow-hidden group aspect-[3/4] reveal-left hero-img-container"
+                    style="transition-delay: 0.4s;">
+                    <img src="assets/images/mugs.png" alt="Mugs"
+                        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="bg-overlay"></div>
+                    <div
+                        class="absolute inset-0 flex flex-col items-center justify-center text-slate-900 dark:text-white overlay-content">
+                        <h3 class="text-3xl font-heading font-bold mb-2">Mugs</h3>
+                        <span
+                            class="text-xs tracking-[0.3em] uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 text-primary dark:text-secondary">Discover
+                            More</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials -->
+    <section class="py-24 bg-warm/30 dark:bg-zinc-800">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold">Trusted by Connoisseurs</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="bg-light dark:bg-zinc-900 border border-primary/5 p-10 rounded-sm text-center reveal-left"
+                    style="transition-delay: 0s;">
+                    <p class="text-slate-600 dark:text-slate-400 italic mb-8 leading-relaxed">"The terracotta set feels
+                        so earthy and premium. It has completely transformed our dining space into an art gallery."</p>
+                    <div class="flex flex-col items-center">
+                        <img src="https://i.pravatar.cc/150?u=art1" alt="Customer"
+                            class="w-16 h-16 rounded-full mb-4 ring-2 ring-primary p-1">
+                        <h5 class="font-heading font-bold text-lg">Elias Thorne</h5>
+                        <p class="text-primary text-[10px] uppercase tracking-widest font-bold">Master Chef, The Green
+                            Room</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-light dark:bg-zinc-900 border border-primary/5 p-10 rounded-sm text-center reveal-left"
+                    style="transition-delay: 0.2s;">
+                    <p class="text-slate-600 dark:text-slate-400 italic mb-8 leading-relaxed">"Their mugs are the only
+                        ones I use now. The tactile connection to the clay makes my morning coffee a ritual."</p>
+                    <div class="flex flex-col items-center">
+                        <img src="https://i.pravatar.cc/150?u=art2" alt="Customer"
+                            class="w-16 h-16 rounded-full mb-4 ring-2 ring-primary p-1">
+                        <h5 class="font-heading font-bold text-lg">Sarah Jenkins</h5>
+                        <p class="text-primary text-[10px] uppercase tracking-widest font-bold">Interior Architect</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-light dark:bg-zinc-900 border border-primary/5 p-10 rounded-sm text-center reveal-left"
+                    style="transition-delay: 0.4s;">
+                    <p class="text-slate-600 dark:text-slate-400 italic mb-8 leading-relaxed">"Incredibly durable and
+                        visually stunning. We've dropped pieces twice and zero chips. The high-firing is real."</p>
+                    <div class="flex flex-col items-center">
+                        <img src="https://i.pravatar.cc/150?u=art3" alt="Customer"
+                            class="w-16 h-16 rounded-full mb-4 ring-2 ring-primary p-1">
+                        <h5 class="font-heading font-bold text-lg">Marcus Vane</h5>
+                        <p class="text-primary text-[10px] uppercase tracking-widest font-bold">Home Collector</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Newsletter / CTA -->
+    <section class="py-24 bg-primary text-white">
+        <div class="container mx-auto px-6 lg:px-12 text-center">
+            <div class="max-w-2xl mx-auto reveal-left">
+                <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-6">Join Our Inner Circle</h2>
+                <p class="text-white/80 mb-10">Get early access to my limited kiln firings and exclusive artisan
+                    workshops.</p>
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Enter your email address"
+                        class="flex-grow px-6 py-4 rounded-sm text-slate-900 border-none focus:ring-2 focus:ring-secondary/50 outline-none">
+                    <button type="submit"
+                        class="bg-secondary text-primary font-bold px-10 py-4 hover:bg-white transition-all transform active:scale-95 uppercase tracking-widest text-sm">Subscribe</button>
+                </form>
+                <p class="mt-6 text-xs text-white/50">*We respect your privacy. No spam, only artisan updates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-dark py-16 border-t border-primary/10 dark:border-white/10">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="flex items-center gap-3 mb-6 font-heading font-bold text-2xl tracking-widest text-primary dark:text-secondary">
+                        <div class="terra-icon"></div>
+                        <span>TERRA</span>
+                    </a>
+                    <p class="text-slate-900 dark:text-slate-200 text-sm leading-relaxed mb-6">Handmade ceramic studio dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links Quick -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
+                        <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
+                        <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Customer -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Customer Care</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Care Instructions</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-6">Visit Studio</h4>
+                    <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
+                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way,
+                            Pottery Valley, PV 8901</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i>
+                            hello@artisanclay.com</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234)
+                            567-8901</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-500 dark:text-slate-400 text-xs">
+                <p>&copy; 2026 Terra Studio. All Rights Reserved. Crafted with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Newsletter Popup -->
+    <div id="newsletter-popup" class="popup">
+        <div class="bg-white dark:bg-zinc-900 p-1 lg:p-0 max-w-4xl w-full mx-4 relative flex flex-col md:flex-row">
+            <button id="close-popup"
+                class="absolute top-4 right-4 z-20 text-white md:text-slate-400 text-2xl hover:scale-110 transition-transform"><i
+                    class="bi bi-x-lg"></i></button>
+            <div class="md:w-1/2 h-48 md:h-auto overflow-hidden">
+                <img src="assets/images/showcase1.png" alt="Newsletter" class="w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-xs font-semibold uppercase">Limited Time
+                    Offer</h6>
+                <h2 class="text-3xl lg:text-4xl font-heading font-bold mb-4">Take 15% Off Your First Set</h2>
+                <p class="text-slate-500 dark:text-slate-400 mb-8 text-sm leading-relaxed">Join our mailing list and
+                    receive an exclusive discount on your organic stoneware collection.</p>
+                <form class="flex flex-col gap-3">
+                    <input type="email" placeholder="Email address"
+                        class="px-4 py-3 bg-slate-100 dark:bg-zinc-800 border-none outline-none focus:ring-1 focus:ring-primary rounded-sm text-sm">
+                    <button class="btn-primary w-full py-4 text-sm font-bold uppercase tracking-widest">Claim My
+                        Discount</button>
+                </form>
+                <button id="no-thanks"
+                    class="mt-4 text-xs text-slate-400 underline underline-offset-4 hover:text-primary transition-colors text-center cursor-pointer">No
+                    thanks, I prefer full price</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Back to Top"><i class="bi bi-chevron-up"></i></button>
+
+    <script src="main.js"></script>
+    <script>
+        document.getElementById('no-thanks').addEventListener('click', () => {
+            document.getElementById('newsletter-popup').classList.remove('show');
+            sessionStorage.setItem('popup-closed', 'true');
+        });
+    </script>
+</body>
+
+</html>
