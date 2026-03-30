@@ -1,40 +1,50 @@
 /* Common Interactive Logic */
 document.addEventListener('DOMContentLoaded', () => {
-    /* Initialize Dark Mode */
-    const themeToggleButton = document.getElementById('theme-toggle');
+    /* Initialize Theme Logic */
+    const themeToggles = document.querySelectorAll('.theme-toggle');
     const body = document.documentElement;
+
+    const updateThemeButtons = (theme) => {
+        themeToggles.forEach(btn => {
+            btn.innerHTML = theme === 'dark' ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
+        });
+    };
 
     const currentTheme = localStorage.getItem('theme') || 'light';
     if (currentTheme === 'dark') {
         body.classList.add('dark');
-        themeToggleButton.innerHTML = '<i class="bi bi-sun-fill"></i>';
-    } else {
-        themeToggleButton.innerHTML = '<i class="bi bi-moon-fill"></i>';
     }
+    updateThemeButtons(currentTheme);
 
-    themeToggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark');
-        const theme = body.classList.contains('dark') ? 'dark' : 'light';
-        localStorage.setItem('theme', theme);
-        themeToggleButton.innerHTML = theme === 'dark' ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
+    themeToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            const theme = body.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', theme);
+            updateThemeButtons(theme);
+        });
     });
 
     /* RTL Support */
-    const rtlToggleButton = document.getElementById('rtl-toggle');
-    const currentRtl = localStorage.getItem('rtl') || 'ltr';
-    if (currentRtl === 'rtl') {
-        body.setAttribute('dir', 'rtl');
-        rtlToggleButton.innerHTML = 'LTR';
-    } else {
-        body.setAttribute('dir', 'ltr');
-        rtlToggleButton.innerHTML = 'RTL';
-    }
+    const rtlToggles = document.querySelectorAll('.rtl-toggle');
+    
+    const updateRtlButtons = (dir) => {
+        rtlToggles.forEach(btn => {
+            btn.innerHTML = dir === 'rtl' ? 'LTR' : 'RTL';
+        });
+    };
 
-    rtlToggleButton.addEventListener('click', () => {
-        const dir = body.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
-        body.setAttribute('dir', dir);
-        localStorage.setItem('rtl', dir);
-        rtlToggleButton.innerHTML = dir === 'rtl' ? 'LTR' : 'RTL';
+    const currentRtl = localStorage.getItem('rtl') || 'ltr';
+    body.setAttribute('dir', currentRtl);
+    updateRtlButtons(currentRtl);
+
+    rtlToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const dir = body.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
+            body.setAttribute('dir', dir);
+            localStorage.setItem('rtl', dir);
+            updateRtlButtons(dir);
+        });
     });
 
     /* Reveal Animations on Scroll */

@@ -54,46 +54,55 @@
 
             <!-- Nav Menu -->
             <div
-                class="hidden md:flex items-center gap-8 font-medium tracking-wide text-sm text-slate-600 dark:text-slate-400">
+                class="hidden lg:flex items-center gap-8 font-medium tracking-wide text-sm text-slate-600 dark:text-slate-400">
                 <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
                 <a href="home2.html" class="text-primary border-b-2 border-primary">Home 2</a>
                 <a href="about.html" class="hover:text-primary transition-colors">About</a>
+                <a href="process.html" class="hover:text-primary transition-colors">Process</a>
+                <a href="pricing.html" class="hover:text-primary transition-colors">Pricing</a>
                 <a href="shop.html" class="hover:text-primary transition-colors">Shop</a>
                 <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
             </div>
 
             <!-- Utility Buttons -->
             <div class="flex items-center gap-4">
-                <a href="signup.html" class="hidden sm:inline-block btn-primary py-2 px-6 text-sm">Sign Up</a>
-                <button id="theme-toggle"
-                    class="p-2 rounded-full hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-lg"
+                <a href="signup.html" class="hidden lg:inline-block btn-primary py-2 px-6 text-sm">Sign Up</a>
+                <button
+                    class="theme-toggle p-2 rounded-full hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-lg"
                     aria-label="Toggle Theme">
                     <i class="bi bi-moon-fill"></i>
                 </button>
 
-                <button id="rtl-toggle"
-                    class="hidden sm:inline-block px-2 py-1 text-xs font-bold border border-primary/50 rounded hover:bg-primary hover:text-white transition-all uppercase"
+                <button
+                    class="rtl-toggle hidden lg:inline-block px-2 py-1 text-xs font-bold border border-primary/50 rounded hover:bg-primary hover:text-white transition-all uppercase"
                     aria-label="Toggle RTL">
                     RTL
                 </button>
 
                 <!-- Hamburger -->
-                <button id="menu-toggle" class="md:hidden p-2 text-2xl text-slate-900 dark:text-white" aria-label="Toggle Mobile Menu">
+                <button id="menu-toggle" class="lg:hidden p-2 text-2xl text-slate-900 dark:text-white" aria-label="Toggle Mobile Menu">
                     <i class="bi bi-list"></i>
                 </button>
             </div>
         </nav>
 
         <!-- Mobile Navigation Overlay -->
-        <div id="mobile-menu" class="md:hidden">
-            <a href="index.html" class="mobile-nav-link">Home 1</a>
-            <a href="home2.html" class="mobile-nav-link text-primary">Home 2</a>
-            <a href="about.html" class="mobile-nav-link">About</a>
-            <a href="shop.html" class="mobile-nav-link">Shop</a>
-            <a href="contact.html" class="mobile-nav-link">Contact</a>
+        <div id="mobile-menu" class="lg:hidden">
+            <a href="index.html" class="mobile-nav-close" aria-label="Close to Home"><i class="bi bi-x-lg"></i></a>
+            <a href="index.html" class="mobile-nav-link text-center">Home 1</a>
+            <a href="home2.html" class="mobile-nav-link text-center text-primary">Home 2</a>
+            <a href="process.html" class="mobile-nav-link text-center">Our Process</a>
+            <a href="pricing.html" class="mobile-nav-link text-center">Pricing</a>
+            <a href="shop.html" class="mobile-nav-link text-center">Shop</a>
+            <a href="contact.html" class="mobile-nav-link text-center">Contact</a>
             
-            <div class="mt-8 flex gap-6">
-                <a href="signup.html" class="btn-primary py-3 px-8">Sign Up</a>
+            <div class="mt-8 flex flex-col items-center gap-6">
+                <a href="signup.html" class="btn-primary py-3 px-8 w-full text-center">Sign Up</a>
+                <div class="flex items-center gap-4">
+                    <button class="rtl-toggle px-6 py-2 text-sm font-bold border border-primary/50 dark:border-white/50 rounded hover:bg-primary hover:text-white transition-all uppercase" aria-label="Toggle RTL">
+                        RTL
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -101,14 +110,14 @@
     <!-- 1. Hero Section (Premium) -->
     <section
         class="min-h-screen pt-24 pb-12 lg:pt-32 lg:pb-24 grid lg:grid-cols-2 gap-12 items-center container mx-auto px-6 lg:px-12">
-        <div class="reveal-left">
+        <div class="reveal-left flex flex-col items-center text-center lg:items-start lg:text-left">
             <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-sm font-semibold uppercase">The Gallery
                 Standard</h6>
             <h1 class="text-5xl lg:text-8xl font-heading font-bold mb-8 leading-tight">Elevated Dining Experience.</h1>
-            <p class="text-slate-800 dark:text-slate-200 text-xl mb-12 font-medium leading-relaxed max-w-lg">Designed
+            <p class="text-slate-800 dark:text-slate-200 text-xl mb-12 font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">Designed
                 for those who appreciate the silence and grace of minimalist objects. Handcrafted with precision and
                 fire.</p>
-            <div class="flex flex-col sm:flex-row gap-5">
+            <div class="flex flex-col sm:flex-row items-center lg:items-start gap-5">
                 <a href="shop.html" class="btn-primary px-12 py-5 text-base">Shop Collection</a>
                 <a href="about.html" class="btn-secondary px-12 py-5 text-base">The Artist's Gallery</a>
             </div>
@@ -182,15 +191,15 @@
     <!-- 3. Best Sellers -->
     <section class="py-24 bg-light dark:bg-zinc-900 border-y border-primary/5">
         <div class="container mx-auto px-6 lg:px-12">
-            <div class="flex justify-between items-end mb-16">
+            <div class="flex flex-col md:flex-row justify-between items-baseline gap-4 mb-16">
                 <div>
-                    <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-xs font-semibold uppercase">The
+                    <h6 class="text-primary font-heading tracking-[0.2em] mb-3 text-[10px] font-semibold uppercase">The
                         Crowd Favorites</h6>
-                    <h2 class="text-3xl lg:text-4xl font-heading font-bold">Client Favorites</h2>
+                    <h2 class="text-3xl lg:text-5xl font-heading font-bold">Client Favorites</h2>
                 </div>
                 <a href="shop.html"
-                    class="text-slate-900 dark:text-white border-b-2 border-primary pb-1 font-bold text-sm tracking-widest uppercase hover:text-primary transition-colors">Show
-                    All</a>
+                    class="text-slate-900 dark:text-white border-b border-primary/40 hover:border-primary pb-0.5 font-bold text-xs tracking-[0.2em] uppercase hover:text-primary transition-all duration-300 group">Show
+                    All <i class="bi bi-arrow-right ml-2 opacity-0 group-hover:opacity-100 transition-opacity"></i></a>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -264,39 +273,39 @@
     <!-- 4. Behind the Scenes (pottery process) -->
     <section class="py-24 bg-white dark:bg-dark">
         <div class="container mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
-            <div class="order-2 lg:order-1 reveal-left">
+            <div class="order-2 lg:order-1 reveal-left flex flex-col items-center text-center lg:items-start lg:text-left">
                 <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-xs font-semibold uppercase">The Maker's
                     Sanctum</h6>
                 <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-8">From Mud to Masterpiece.</h2>
                 <div class="space-y-8">
                     <div class="flex gap-6">
                         <div
-                            class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-primary font-bold">
+                            class="w-12 h-12 bg-secondary rounded-full flex shrink-0 items-center justify-center text-primary font-bold">
                             1</div>
                         <div>
                             <h4 class="font-heading font-bold text-lg mb-2">Sustainable Sourcing</h4>
-                            <p class="text-slate-500 text-sm">We only use local clay sourced within 50 miles of our
+                            <p class="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">We only use local clay sourced within 50 miles of our
                                 studio to reduce our carbon footprint.</p>
                         </div>
                     </div>
                     <div class="flex gap-6">
                         <div
-                            class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-primary font-bold">
+                            class="w-12 h-12 bg-secondary rounded-full flex shrink-0 items-center justify-center text-primary font-bold">
                             2</div>
                         <div>
-                            <h4 class="font-heading font-bold text-lg mb-2">Traditional Firing</h4>
-                            <p class="text-slate-500 text-sm">Each piece is fire-hardened in small batches to ensure
-                                consistent glaze and durability.</p>
+                            <h4 class="font-heading font-bold text-lg mb-2">Solar-Powered Kilns</h4>
+                            <p class="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">Our kilns are electric and powered 100% by solar grids,
+                                ensuring a clean firing process.</p>
                         </div>
                     </div>
                     <div class="flex gap-6">
                         <div
-                            class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-primary font-bold">
+                            class="w-12 h-12 bg-secondary rounded-full flex shrink-0 items-center justify-center text-primary font-bold">
                             3</div>
                         <div>
-                            <h4 class="font-heading font-bold text-lg mb-2">Hand-Stamped Branding</h4>
-                            <p class="text-slate-500 text-sm">Look for the artisan stamp at the bottom of every piece —
-                                my personal seal of quality.</p>
+                            <h4 class="font-heading font-bold text-lg mb-2">Recycled Water System</h4>
+                            <p class="text-slate-800 dark:text-slate-200 text-sm leading-relaxed">We recycle over 90% of the water used in our cleaning and
+                                throwing processes.</p>
                         </div>
                     </div>
                 </div>
@@ -358,7 +367,7 @@
     <!-- Footer -->
     <footer class="bg-white dark:bg-dark py-16 border-t border-primary/10 dark:border-white/10">
         <div class="container mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Branding -->
                 <div class="col-span-1 md:col-span-1">
                     <a href="index.html" class="terra-brand" aria-label="Terra Home">
@@ -379,8 +388,8 @@
                     <ul class="space-y-4 text-sm text-slate-700 dark:text-slate-300">
                         <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                         <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
-                        <li><a href="about.html" class="hover:text-primary transition-colors">Our Story</a></li>
-                        <li><a href="shop.html" class="hover:text-primary transition-colors">Shop</a></li>
+                        <li><a href="process.html" class="hover:text-primary transition-colors">Our Process</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-colors">Pricing</a></li>
                     </ul>
                 </div>
 
