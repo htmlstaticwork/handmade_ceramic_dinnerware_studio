@@ -143,4 +143,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+    /* Form Submission Handling (Login/Signup/Contact) */
+    const authForms = document.querySelectorAll('form');
+    authForms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) {
+                const originalText = submitBtn.innerText;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="bi bi-arrow-repeat spin inline-block"></i> Processing...';
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Success!';
+                    submitBtn.classList.remove('btn-primary');
+                    submitBtn.classList.add('bg-green-600', 'text-white');
+                    
+                    if (document.title.includes('Login') || document.title.includes('Sign Up')) {
+                        setTimeout(() => {
+                            window.location.href = 'index.html';
+                        }, 1500);
+                    } else {
+                        setTimeout(() => {
+                            submitBtn.disabled = false;
+                            submitBtn.innerText = originalText;
+                            submitBtn.classList.add('btn-primary');
+                            submitBtn.classList.remove('bg-green-600', 'text-white');
+                            form.reset();
+                        }, 2000);
+                    }
+                }, 1500);
+            }
+        });
+    });
 });

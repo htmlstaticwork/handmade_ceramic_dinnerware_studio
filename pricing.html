@@ -54,20 +54,19 @@
             </a>
 
             <!-- Nav Menu -->
-            <div
-                class="hidden lg:flex items-center gap-6 font-medium tracking-wide text-[13px] text-slate-600 dark:text-slate-400">
-                <a href="index.html" class="hover:text-primary transition-colors">Home 1</a>
-                <a href="home2.html" class="hover:text-primary transition-colors">Home 2</a>
-                <a href="about.html" class="hover:text-primary transition-colors">About</a>
-                <a href="process.html" class="hover:text-primary transition-colors">Process</a>
-                <a href="pricing.html" class="text-primary border-b-2 border-primary">Pricing</a>
-                <a href="shop.html" class="hover:text-primary transition-colors">Shop</a>
-                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+            <div class="hidden lg:flex items-center gap-4 xl:gap-8 font-medium tracking-wide text-[12px] xl:text-[13px] text-slate-600 dark:text-slate-400">
+                <a href="index.html" class="hover:text-primary transition-colors whitespace-nowrap">Home 1</a>
+                <a href="home2.html" class="hover:text-primary transition-colors whitespace-nowrap">Home 2</a>
+                <a href="about.html" class="hover:text-primary transition-colors whitespace-nowrap">About</a>
+                <a href="process.html" class="hover:text-primary transition-colors whitespace-nowrap">Process</a>
+                <a href="pricing.html" class="text-primary border-b-2 border-primary whitespace-nowrap">Pricing</a>
+                <a href="shop.html" class="hover:text-primary transition-colors whitespace-nowrap">Shop</a>
+                <a href="contact.html" class="hover:text-primary transition-colors whitespace-nowrap">Contact</a>
             </div>
 
             <!-- Utility Buttons -->
-            <div class="flex items-center gap-4">
-                <a href="signup.html" class="hidden lg:inline-block btn-primary py-2 px-6 text-sm">Sign Up</a>
+            <div class="flex items-center gap-2 xl:gap-4">
+                <a href="signup.html" class="hidden lg:inline-block btn-primary py-2 px-3 xl:px-6 text-xs xl:text-sm">Sign Up</a>
                 <button
                     class="theme-toggle p-2 rounded-full hover:bg-primary/5 dark:hover:bg-white/5 transition-colors text-lg"
                     aria-label="Toggle Theme">
@@ -92,14 +91,15 @@
             <a href="#" class="mobile-nav-close" id="mobile-menu-close"><i class="bi bi-x-lg"></i></a>
             <a href="index.html" class="mobile-nav-link text-center">Home 1</a>
             <a href="home2.html" class="mobile-nav-link text-center">Home 2</a>
+            <a href="about.html" class="mobile-nav-link text-center">About</a>
             <a href="process.html" class="mobile-nav-link text-center">Process</a>
             <a href="pricing.html" class="mobile-nav-link text-center text-primary">Pricing</a>
             <a href="shop.html" class="mobile-nav-link text-center">Shop</a>
             <a href="contact.html" class="mobile-nav-link text-center">Contact</a>
 
-            <div class="mt-8 flex flex-col items-center gap-6 px-12">
+            <div class="mt-6 flex flex-col items-center gap-6 px-12">
                 <a href="signup.html"
-                    class="btn-primary py-4 px-8 w-full text-center tracking-widest uppercase text-sm">Sign Up</a>
+                    class="btn-primary py-2.5 px-6 w-full text-center tracking-widest uppercase text-sm">Sign Up</a>
                 <button
                     class="rtl-toggle px-6 py-2 text-sm font-bold border border-primary/50 dark:border-white/50 rounded hover:bg-primary hover:text-white transition-all uppercase"
                     aria-label="Toggle RTL">
@@ -110,7 +110,7 @@
     </header>
 
     <!-- 1. Hero Section -->
-    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden hero-img-container">
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden hero-img-container pt-24 lg:pt-0">
         <div class="absolute inset-0 bg-[url('assets/images/hero2.png')] bg-cover bg-center"></div>
         <div class="bg-overlay"></div>
 
@@ -134,10 +134,8 @@
         </div>
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Starter Set -->
-            <div
-                class="price-card p-10 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 reveal-left hover:shadow-2xl transition-all group">
-                <div
-                    class="text-xs font-bold text-primary uppercase tracking-widest mb-6 border-b border-primary/20 pb-4 inline-block">
+            <div class="price-card p-10 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 reveal-left hover:shadow-2xl transition-all group flex flex-col h-full">
+                <div class="text-xs font-bold text-primary uppercase tracking-widest mb-6 border-b border-primary/20 pb-4 inline-block">
                     The Starter Set</div>
                 <h3 class="text-4xl font-heading font-bold mb-4">$145<span
                         class="text-sm font-normal text-slate-400">/set</span></h3>
@@ -149,15 +147,13 @@
                     <li class="flex items-center gap-3"><i class="bi bi-check2 text-primary"></i> 1 Signature Mug</li>
                 </ul>
                 <a href="shop.html"
-                    class="w-full btn-primary py-4 inline-block text-center text-xs tracking-widest uppercase">Order
+                    class="w-full btn-primary py-4 inline-block text-center text-xs tracking-widest uppercase mt-auto">Order
                     Now</a>
             </div>
 
-            <!-- Dinner Party -->
-            <div class="price-card p-10 bg-primary text-white border border-primary reveal-left hover:shadow-2xl transition-all scale-105 z-10 shadow-xl"
+            <div class="price-card p-10 bg-primary text-white border border-primary reveal-left hover:shadow-2xl transition-all md:scale-105 z-10 shadow-xl flex flex-col h-full"
                 style="transition-delay: 0.1s;">
-                <div
-                    class="text-xs font-bold text-white uppercase tracking-widest mb-6 border-b border-white/20 pb-4 inline-block">
+                <div class="text-xs font-bold text-white uppercase tracking-widest mb-6 border-b border-white/20 pb-4 inline-block">
                     The Dinner Party</div>
                 <h3 class="text-4xl font-heading font-bold mb-4">$520<span
                         class="text-sm font-normal text-white/60">/set</span></h3>
@@ -170,15 +166,13 @@
                     </li>
                 </ul>
                 <a href="shop.html"
-                    class="w-full bg-white text-primary py-4 inline-block text-center text-xs tracking-widest uppercase font-bold hover:bg-secondary transition-colors shadow-lg">Our
+                    class="w-full bg-white text-primary py-4 inline-block text-center text-xs tracking-widest uppercase font-bold hover:bg-secondary transition-colors shadow-lg mt-auto">Our
                     Most Popular</a>
             </div>
 
-            <!-- Full Studio -->
-            <div class="price-card p-10 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 reveal-left hover:shadow-2xl transition-all"
+            <div class="price-card p-10 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 reveal-left hover:shadow-2xl transition-all flex flex-col h-full"
                 style="transition-delay: 0.2s;">
-                <div
-                    class="text-xs font-bold text-primary uppercase tracking-widest mb-6 border-b border-primary/20 pb-4 inline-block">
+                <div class="text-xs font-bold text-primary uppercase tracking-widest mb-6 border-b border-primary/20 pb-4 inline-block">
                     The Studio Collection</div>
                 <h3 class="text-4xl font-heading font-bold mb-4">$1,200<span
                         class="text-sm font-normal text-slate-400">/set</span></h3>
@@ -193,7 +187,7 @@
                         Access</li>
                 </ul>
                 <a href="shop.html"
-                    class="w-full btn-primary py-4 inline-block text-center text-xs tracking-widest uppercase">Contact
+                    class="w-full btn-primary py-4 inline-block text-center text-xs tracking-widest uppercase mt-auto">Contact
                     Artisan</a>
             </div>
         </div>
@@ -202,9 +196,8 @@
     <!-- 3. A La Carte Pricing -->
     <section class="py-24 bg-white dark:bg-dark">
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="reveal-left">
-                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">Individual
-                    Pieces</h6>
+            <div class="reveal-left text-center lg:text-left">
+                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">Individual Pieces</h6>
                 <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8">A La Carte Selection</h2>
                 <div class="space-y-6">
                     <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
@@ -249,7 +242,7 @@
                 <img src="https://images.pexels.com/photos/8063852/pexels-photo-8063852.jpeg" alt="Individual Ceramics"
                     class="w-full h-full object-cover shadow-2xl rounded-sm">
                 <div
-                    class="absolute -bottom-6 -left-6 bg-primary text-white p-8 max-w-xs shadow-xl hidden sm:block border-8 border-light dark:border-zinc-800">
+                    class="relative sm:absolute sm:-bottom-6 sm:-left-6 mt-8 sm:mt-0 bg-primary text-white p-8 max-w-xs shadow-xl border-8 border-light dark:border-zinc-800 reveal-left">
                     <p class="text-sm italic font-light">"Each plate goes through 4 human inspections before firing."
                     </p>
                     <p class="text-[10px] uppercase tracking-widest font-bold mt-4">— Quality Guarantee</p>
@@ -305,17 +298,16 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white dark:bg-dark py-16 border-t border-primary/10 dark:border-white/10">
+    <footer class="bg-dark text-white py-16 border-t border-white/5 site-footer">
         <div class="container mx-auto px-6 lg:px-12">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <!-- Branding -->
                 <div class="col-span-1 md:col-span-1">
-                    <a href="index.html" class="terra-brand" aria-label="Terra Home">
+                    <a href="index.html" class="terra-brand mb-10" aria-label="Terra Home">
                         <div class="terra-icon"></div>
                         <span>TERRA</span>
                     </a>
-                    <p class="text-slate-800 dark:text-slate-100 text-sm leading-relaxed mb-6">Handmade ceramic studio
-                        dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">Handmade ceramic studio dedicated to bringing natural beauty and artisan craft to your dinner table.</p>
                     <div class="flex gap-4">
                         <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
@@ -325,8 +317,8 @@
 
                 <!-- Links Quick -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Quick Links</h4>
-                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white uppercase tracking-widest">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-slate-300">
                         <li><a href="index.html" class="hover:text-primary transition-colors">Home 1</a></li>
                         <li><a href="home2.html" class="hover:text-primary transition-colors">Home 2</a></li>
                         <li><a href="about.html" class="hover:text-primary transition-colors">About</a></li>
@@ -337,8 +329,8 @@
 
                 <!-- Links Customer -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Customer Care</h4>
-                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white uppercase tracking-widest">Customer Care</h4>
+                    <ul class="space-y-4 text-sm text-slate-300">
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Contact Us</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Shipping & Returns</a></li>
                         <li><a href="#" class="hover:text-primary transition-colors">Care Instructions</a></li>
@@ -348,20 +340,16 @@
 
                 <!-- Contact -->
                 <div>
-                    <h4 class="font-heading font-bold text-lg mb-6 text-primary dark:text-white">Visit Studio</h4>
-                    <ul class="space-y-4 text-sm text-slate-800 dark:text-slate-200">
-                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way,
-                            Pottery Valley, PV 8901</li>
-                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i>
-                            hello@artisanclay.com</li>
-                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234)
-                            567-8901</li>
+                    <h4 class="font-heading font-bold text-lg mb-6 text-white uppercase tracking-widest">Visit Studio</h4>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="flex items-start gap-3"><i class="bi bi-geo-alt text-primary"></i> 123 Ceramic Way, Pottery Valley, PV 8901</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-envelope text-primary"></i> hello@artisanclay.com</li>
+                        <li class="flex items-start gap-3"><i class="bi bi-telephone text-primary"></i> +1 (234) 567-8901</li>
                     </ul>
                 </div>
             </div>
 
-            <div
-                class="pt-8 border-t border-primary/10 dark:border-white/10 text-center text-slate-600 dark:text-slate-300 text-xs">
+            <div class="pt-8 border-t border-white/5 text-center text-slate-500 text-xs">
                 <p>&copy; 2026 Terra Studio. All Rights Reserved. Crafted with passion.</p>
             </div>
         </div>
