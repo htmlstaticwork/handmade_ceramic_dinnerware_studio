@@ -678,31 +678,40 @@ footer h4.font-heading {
   text-transform: uppercase;
 }
 
+/* LIGHT MODE DEFAULTS */
 .site-footer {
-  background-color: #121212 !important; /* Deeper, more premium dark */
-  color: #e5e7eb !important;
+  background-color: var(--light) !important;
+  color: #1f2937 !important; /* text-slate-800 */
 }
 
-.site-footer p {
-  color: #9ca3af !important;
+/* Base text elements */
+.site-footer p,
+.site-footer li {
+  color: #4b5563 !important; /* text-slate-600 */
   font-size: 0.95rem !important;
   line-height: 1.8 !important;
 }
 
+.site-footer h4 {
+  color: var(--dark) !important;
+}
+
+/* Links */
 .site-footer a:not(.terra-brand, .social-icon) {
-  color: #9ca3af !important;
+  color: #4b5563 !important; /* text-slate-600 */
   font-size: 0.9rem !important;
   transition: all 0.3s ease;
 }
 
 .site-footer a:not(.terra-brand, .social-icon):hover {
-  color: var(--secondary) !important;
+  color: var(--primary) !important;
   transform: translateX(5px);
 }
 
+/* Social icons */
 .site-footer .social-icon {
-  background-color: rgba(255, 255, 255, 0.15); /* Increased for better visibility */
-  color: white;
+  background-color: rgba(124, 74, 58, 0.05); /* primary/5 */
+  color: var(--primary);
   width: 42px;
   height: 42px;
   font-size: 1.1rem;
@@ -714,9 +723,47 @@ footer h4.font-heading {
 }
 
 .site-footer .social-icon:hover {
+  background-color: var(--primary) !important;
+  color: white !important;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(124, 74, 58, 0.2);
+}
+
+.site-footer .border-white\/5 {
+  border-color: rgba(124, 74, 58, 0.1) !important; /* primary/10 */
+}
+
+/* DARK MODE OVERRIDES */
+.dark .site-footer {
+  background-color: #121212 !important; /* Deeper, more premium dark */
+  color: #e5e7eb !important;
+}
+
+.dark .site-footer p,
+.dark .site-footer li {
+  color: #9ca3af !important;
+}
+
+.dark .site-footer h4 {
+  color: white !important;
+}
+
+.dark .site-footer a:not(.terra-brand, .social-icon) {
+  color: #9ca3af !important;
+}
+
+.dark .site-footer a:not(.terra-brand, .social-icon):hover {
+  color: var(--secondary) !important;
+}
+
+.dark .site-footer .social-icon {
+  background-color: rgba(255, 255, 255, 0.15); /* Increased for better visibility */
+  color: white;
+}
+
+.dark .site-footer .social-icon:hover {
   background-color: var(--secondary) !important;
   color: var(--primary) !important;
-  transform: translateY(-5px) scale(1.1);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -726,7 +773,7 @@ footer h4.font-heading {
   color: var(--primary) !important;
 }
 
-.site-footer .border-white\/5 {
+.dark .site-footer .border-white\/5 {
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
