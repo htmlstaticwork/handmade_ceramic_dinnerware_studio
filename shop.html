@@ -164,6 +164,15 @@
                     { name: "Ceramic Spoon Rest", price: 18.00, img: "https://images.pexels.com/photos/4226876/pexels-photo-4226876.jpeg", badge: null, category: "Serving" }
                 ];
 
+                const productObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            observer.unobserve(entry.target); // Optional: stop observing once revealed
+                        }
+                    });
+                }, { threshold: 0.1 });
+
                 function renderProducts(filter = 'all') {
                     const grid = document.getElementById('product-grid');
                     grid.innerHTML = '';
@@ -189,10 +198,8 @@
                         `;
                         grid.appendChild(productEl);
                         
-                        // Re-trigger scroll reveal for dynamic content
-                        if (window.innerHeight > productEl.getBoundingClientRect().top) {
-                            setTimeout(() => productEl.classList.add('active'), 100);
-                        }
+                        // Observe dynamic element for scroll reveal
+                        productObserver.observe(productEl);
                     });
                 }
 

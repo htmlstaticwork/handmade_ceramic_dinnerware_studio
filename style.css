@@ -159,9 +159,18 @@ body {
   line-height: 1 !important;
 }
 
-.dark .terra-brand,
-.site-footer .terra-brand {
+.dark .terra-brand {
   color: var(--secondary) !important;
+}
+
+/* Permit contrast modifications when brand is placed on a light card despite dark mode */
+.dark .bg-white .terra-brand,
+.dark .terra-brand.\!text-dark {
+  color: var(--dark) !important;
+}
+
+.dark .terra-brand.\!text-primary {
+  color: var(--primary) !important;
 }
 
 .terra-icon {
@@ -217,12 +226,12 @@ header nav button.theme-toggle {
   padding: 0 0.8rem !important;
 }
 
-/* Desktop specific header styles */
+/* Desktop specific header styles (Tablet Landscape / Small Laptop) */
 @media (min-width: 1024px) {
   header nav div.hidden.lg\:flex a {
-    font-weight: 850 !important;
-    font-size: 17px !important;
-    letter-spacing: 0.08em !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.05em !important;
     text-transform: uppercase;
     transition: all 0.3s ease;
     display: flex;
@@ -231,23 +240,40 @@ header nav button.theme-toggle {
   }
 
   header nav div.hidden.lg\:flex a.text-primary {
-    border-bottom-width: 3px !important;
+    border-bottom-width: 2px !important;
   }
 
   header nav a.btn-primary {
-    font-size: 16px !important;
-    font-weight: 850 !important;
-    padding: 0.75rem 2rem !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    padding: 0.6rem 1.2rem !important;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
   }
-
   header nav button.rtl-toggle {
     font-size: 18px !important; 
     display: flex !important;
     align-items: center;
     padding: 0 0.8rem !important;
+  }
+}
+
+/* Large Desktop screens */
+@media (min-width: 1280px) {
+  header nav div.hidden.lg\:flex a {
+    font-weight: 850 !important;
+    font-size: 15px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  header nav div.hidden.lg\:flex a.text-primary {
+    border-bottom-width: 3px !important;
+  }
+
+  header nav a.btn-primary {
+    font-size: 15px !important;
+    padding: 0.75rem 2rem !important;
   }
 }
 
@@ -373,9 +399,7 @@ header nav button.theme-toggle {
   color: #fff;
 }
 
-.btn-social:hover i {
-  color: #fff !important;
-}
+
 
 .dark .btn-social:hover {
   background-color: var(--secondary);
@@ -424,11 +448,16 @@ header nav button.theme-toggle {
 }
 
 .dark .mobile-nav-link {
-  color: var(--text-light);
+  color: var(--light);
+}
+
+.mobile-nav-link.text-primary,
+.dark .mobile-nav-link.text-primary {
+  color: var(--primary) !important;
 }
 
 .mobile-nav-link:hover {
-  color: var(--primary);
+  color: var(--primary) !important;
   transform: translateX(10px); /* Changed from scale for better visual flow */
 }
 
@@ -691,14 +720,6 @@ footer h4.font-heading {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.site-footer .terra-brand {
-  color: white !important;
-}
-
-.site-footer .terra-icon {
-  color: var(--secondary) !important;
-}
-
 .site-footer .bi-geo-alt, 
 .site-footer .bi-envelope, 
 .site-footer .bi-telephone {
@@ -752,9 +773,6 @@ footer .text-xs {
   to { transform: rotate(360deg); }
 }
 
-/* Ensure Tailwind's hidden class is respected in the navbar regardless of specificity */
-header nav .hidden {
-  display: none !important;
-}
+
 
 
