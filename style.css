@@ -62,6 +62,7 @@ body {
 .btn-primary {
   background-color: var(--primary);
   color: #fff;
+  border: 2px solid var(--primary); /* Maintain same scale as btn-secondary */
   border-radius: 4px;
   padding: 12px 28px;
   transition: all 0.3s ease;
@@ -73,6 +74,7 @@ body {
 
 .btn-primary:hover {
   background-color: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 10px 20px rgba(124, 74, 58, 0.2);
   filter: brightness(1.1);
@@ -818,6 +820,54 @@ footer .text-xs {
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* ---------------------------------------------------------
+   Shop Category Filter Buttons
+   --------------------------------------------------------- */
+.filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    cursor: pointer;
+    border: none;
+    opacity: 1 !important;
+    /* Maintain padding and text style */
+    padding: 0.5rem 2rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+}
+
+.filter-btn {
+    background-color: #FDFBF8; /* Faint warm light */
+    color: #2C1810; /* Deep cocoa */
+}
+
+.dark .filter-btn {
+    background-color: rgba(26, 26, 26, 0.6); /* Translucent dark context */
+    color: #F5E6D3; /* Pale beige */
+}
+
+/* Hover & Active States */
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: #C8602A !important; /* Terracotta Flare */
+    color: white !important;
+    opacity: 1 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(200, 96, 42, 0.2);
+}
+
+.dark .filter-btn:hover,
+.dark .filter-btn.active {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.filter-btn:active {
+    transform: translateY(0);
 }
 
 

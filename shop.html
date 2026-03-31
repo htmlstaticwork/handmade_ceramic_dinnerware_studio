@@ -123,11 +123,11 @@
     <section class="py-12 bg-white dark:bg-zinc-900 border-b border-primary/5">
         <div class="container mx-auto px-6 lg:px-12 flex flex-col items-center gap-10">
             <div class="flex flex-wrap items-center justify-center gap-4 md:gap-8 no-scrollbar" id="category-filters">
-                <button class="filter-btn active px-8 py-2 bg-primary text-white text-sm font-bold tracking-[0.2em] uppercase transition-all duration-300" data-category="all">All Pieces</button>
-                <button class="filter-btn px-8 py-2 bg-slate-50 dark:bg-dark/50 text-slate-500 text-sm font-bold tracking-[0.2em] uppercase hover:bg-primary/5 transition-all duration-300" data-category="Plates">Plates</button>
-                <button class="filter-btn px-8 py-2 bg-slate-50 dark:bg-dark/50 text-slate-500 text-sm font-bold tracking-[0.2em] uppercase hover:bg-primary/5 transition-all duration-300" data-category="Bowls">Bowls</button>
-                <button class="filter-btn px-8 py-2 bg-slate-50 dark:bg-dark/50 text-slate-500 text-sm font-bold tracking-[0.2em] uppercase hover:bg-primary/5 transition-all duration-300" data-category="Mugs">Mugs</button>
-                <button class="filter-btn px-8 py-2 bg-slate-50 dark:bg-dark/50 text-slate-500 text-sm font-bold tracking-[0.2em] uppercase hover:bg-primary/5 transition-all duration-300" data-category="Serving">Serving</button>
+                <button class="filter-btn active" data-category="all">All Pieces</button>
+                <button class="filter-btn" data-category="Plates">Plates</button>
+                <button class="filter-btn" data-category="Bowls">Bowls</button>
+                <button class="filter-btn" data-category="Mugs">Mugs</button>
+                <button class="filter-btn" data-category="Serving">Serving</button>
             </div>
             <div class="flex items-center justify-center w-full max-w-xl">
                 <select
@@ -211,11 +211,9 @@
                     btn.addEventListener('click', (e) => {
                         // Update UI
                         document.querySelectorAll('.filter-btn').forEach(b => {
-                            b.classList.remove('active', 'bg-primary', 'text-white');
-                            b.classList.add('bg-slate-50', 'dark:bg-dark/50', 'text-slate-500');
+                            b.classList.remove('active');
                         });
-                        btn.classList.add('active', 'bg-primary', 'text-white');
-                        btn.classList.remove('bg-slate-50', 'dark:bg-dark/50', 'text-slate-500');
+                        btn.classList.add('active');
 
                         // Filter products
                         renderProducts(btn.dataset.category);
