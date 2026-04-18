@@ -1,5 +1,18 @@
 /* Common Interactive Logic */
 document.addEventListener('DOMContentLoaded', () => {
+    /* Handle Preloader */
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.style.transform = 'scale-x(0.3)';
+        window.addEventListener('load', () => {
+            loader.style.transform = 'scale-x(1)';
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.remove(), 500);
+            }, 500);
+        });
+    }
+
     /* Initialize Theme Logic */
     const themeToggles = document.querySelectorAll('.theme-toggle');
     const body = document.documentElement;
@@ -10,10 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    if (currentTheme === 'dark') {
-        body.classList.add('dark');
-    }
+    // Theme is already initialized in <head>, just sync buttons
+    const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
     updateThemeButtons(currentTheme);
 
     themeToggles.forEach(btn => {
@@ -49,16 +60,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Reveal Animations on Scroll */
     const revealElements = document.querySelectorAll('.reveal-left, .fade-in');
-    const revealCallback = (entries) => {
+    const revealCallback = (entries, obs) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
+                obs.unobserve(entry.target); // Stop watching once revealed for performance
             }
         });
     };
 
-    const observer = new IntersectionObserver(revealCallback, { threshold: 0.1 });
-    revealElements.forEach(el => observer.observe(el));
+    const observer = new IntersectionObserver(revealCallback, { 
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px' // Trigger slightly before the element is fully in view
+    });
+    
+    revealElements.forEach(el => {
+        // Immediate check if element is already in view (common for headers/hero)
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            el.classList.add('active');
+        } else {
+            observer.observe(el);
+        }
+    });
 
     /* Newsletter Popup (only for index.html) */
     if (document.getElementById('newsletter-popup')) {
@@ -115,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         
-        // Close menu on outside click if desired
+        // Close menu on outside click
         window.addEventListener('click', (e) => {
             if (mobileMenu.classList.contains('active') && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
                 mobileMenu.classList.remove('active');
@@ -143,7 +167,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    /* Form Submission Handling (Login/Signup/Contact) */
+
+    /* Form Submission Handling */
     const authForms = document.querySelectorAll('form');
     authForms.forEach(form => {
         form.addEventListener('submit', (e) => {

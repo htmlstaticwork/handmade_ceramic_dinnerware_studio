@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@500;600;700;800;900&display=swap"
         rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -40,9 +40,20 @@
         }
     </script>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Critical: Initialize theme before page render to prevent flash
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
 </head>
 
 <body class="bg-light dark:bg-dark text-slate-800 dark:text-light transition-colors duration-300">
+    <!-- Preloader -->
+    <div id="loader" class="fixed top-0 left-0 w-full h-1 bg-primary z-[9999] origin-left transition-transform duration-500 scale-x-0"></div>
 
     <!-- Header -->
     <header class="fixed top-0 w-full z-50 border-b border-primary/10 dark:border-white/10 glass-nav">
@@ -193,48 +204,51 @@
         </div>
     </section>
 
-    <!-- 3. A La Carte Pricing -->
+    <!-- 3. Single-Piece Pricing -->
     <section class="py-24 bg-white dark:bg-dark">
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div class="reveal-left text-center lg:text-left">
-                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">Individual Pieces</h6>
-                <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-8">A La Carte Selection</h2>
+                <h6 class="text-primary font-heading tracking-[0.2em] mb-4 text-[10px] font-bold uppercase">Mix &amp; Match</h6>
+                <h2 class="text-3xl lg:text-5xl font-heading font-bold mb-3">Buy Individual Pieces</h2>
+                <p class="text-base font-medium text-slate-700 dark:text-slate-300 mb-8 leading-relaxed">
+                    Not ready for a full set? Pick exactly what you need — priced per piece, with the same studio quality.
+                </p>
                 <div class="space-y-6">
-                    <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
+                    <!-- Dinner Plates -->
+                    <div class="flex justify-between items-start border-b border-primary/10 pb-5 group">
                         <div class="text-left">
-                            <h4
-                                class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
+                            <h4 class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
                                 Dinner Plates</h4>
-                            <p class="text-xs text-slate-500 uppercase tracking-widest">Ø 28cm | Classic Rim</p>
+                            <p class="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">28 cm · classic wide rim · dishwasher safe</p>
                         </div>
-                        <span class="text-xl font-heading font-bold text-primary">$45.00</span>
+                        <span class="text-xl font-heading font-bold text-primary shrink-0 ml-6">$45.00</span>
                     </div>
-                    <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
+                    <!-- Pasta / Salad Bowls -->
+                    <div class="flex justify-between items-start border-b border-primary/10 pb-5 group">
                         <div class="text-left">
-                            <h4
-                                class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
-                                Pasta/Salad Bowls</h4>
-                            <p class="text-xs text-slate-500 uppercase tracking-widest">Ø 22cm | Depth 6cm</p>
+                            <h4 class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
+                                Pasta &amp; Salad Bowls</h4>
+                            <p class="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">22 cm wide · 6 cm deep · ideal for pasta, salads &amp; soups</p>
                         </div>
-                        <span class="text-xl font-heading font-bold text-primary">$38.00</span>
+                        <span class="text-xl font-heading font-bold text-primary shrink-0 ml-6">$38.00</span>
                     </div>
-                    <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
+                    <!-- Artisan Mugs -->
+                    <div class="flex justify-between items-start border-b border-primary/10 pb-5 group">
                         <div class="text-left">
-                            <h4
-                                class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
+                            <h4 class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
                                 Artisan Mugs</h4>
-                            <p class="text-xs text-slate-500 uppercase tracking-widest">350ml | Hand-pulled handles</p>
+                            <p class="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">350 ml · hand-pulled handle · perfect for coffee or tea</p>
                         </div>
-                        <span class="text-xl font-heading font-bold text-primary">$32.00</span>
+                        <span class="text-xl font-heading font-bold text-primary shrink-0 ml-6">$32.00</span>
                     </div>
-                    <div class="flex justify-between items-baseline border-b border-primary/10 pb-4 group">
+                    <!-- Serving Platters -->
+                    <div class="flex justify-between items-start border-b border-primary/10 pb-5 group">
                         <div class="text-left">
-                            <h4
-                                class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
+                            <h4 class="font-heading font-bold text-lg group-hover:text-primary transition-colors cursor-pointer">
                                 Serving Platters</h4>
-                            <p class="text-xs text-slate-500 uppercase tracking-widest">Large Oval | 40cm Length</p>
+                            <p class="text-sm font-normal text-slate-500 dark:text-slate-400 mt-0.5">Large oval · 40 cm long · great for sharing boards</p>
                         </div>
-                        <span class="text-xl font-heading font-bold text-primary">$85.00</span>
+                        <span class="text-xl font-heading font-bold text-primary shrink-0 ml-6">$85.00</span>
                     </div>
                 </div>
             </div>
@@ -243,8 +257,7 @@
                     class="w-full h-[300px] md:h-[400px] lg:h-full object-cover shadow-2xl rounded-sm">
                 <div
                     class="relative lg:absolute lg:-bottom-6 lg:-left-6 mt-8 lg:mt-0 md:mx-auto lg:mx-0 bg-primary text-white p-8 max-w-xs shadow-xl border-8 border-light dark:border-zinc-800 reveal-left">
-                    <p class="text-sm italic font-light">"Each plate goes through 4 human inspections before firing."
-                    </p>
+                    <p class="text-sm italic font-light">"Each plate goes through 4 human inspections before firing."</p>
                     <p class="text-[10px] uppercase tracking-widest font-bold mt-4">— Quality Guarantee</p>
                 </div>
             </div>

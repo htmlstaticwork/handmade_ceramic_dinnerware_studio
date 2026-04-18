@@ -245,19 +245,30 @@ header nav button.theme-toggle {
     border-bottom-width: 2px !important;
   }
 
+  /* Unified height for Sign Up, theme toggle, and RTL toggle */
+  header nav .flex.items-center > a.btn-primary,
+  header nav .flex.items-center > button.theme-toggle,
+  header nav .flex.items-center > button.rtl-toggle {
+    height: 36px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
   header nav a.btn-primary {
     font-size: 13px !important;
     font-weight: 700 !important;
-    padding: 0.6rem 1.2rem !important;
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
+    padding: 0 1.2rem !important;
+  }
+  header nav button.theme-toggle {
+    font-size: 18px !important;
+    padding: 0 0.6rem !important;
   }
   header nav button.rtl-toggle {
-    font-size: 18px !important; 
-    display: flex !important;
-    align-items: center;
-    padding: 0 0.8rem !important;
+    font-size: 11px !important;
+    letter-spacing: 0.08em !important;
+    padding: 0 0.75rem !important;
   }
 }
 
@@ -273,9 +284,15 @@ header nav button.theme-toggle {
     border-bottom-width: 3px !important;
   }
 
+  header nav .flex.items-center > a.btn-primary,
+  header nav .flex.items-center > button.theme-toggle,
+  header nav .flex.items-center > button.rtl-toggle {
+    height: 40px !important;
+  }
+
   header nav a.btn-primary {
     font-size: 15px !important;
-    padding: 0.75rem 2rem !important;
+    padding: 0 2rem !important;
   }
 }
 
