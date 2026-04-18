@@ -98,21 +98,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* Auth Page - Password Toggle */
-    const pwToggle = document.getElementById('password-toggle');
-    if (pwToggle) {
-        pwToggle.addEventListener('click', () => {
-            const pwInput = document.getElementById('password-input');
-            const icon = pwToggle.querySelector('i');
-            if (pwInput.type === 'password') {
-                pwInput.type = 'text';
-                icon.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
-            } else {
-                pwInput.type = 'password';
-                icon.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+    /* Auth Page - Password Visibility Toggles */
+    const toggles = document.querySelectorAll('[id$="-toggle"]');
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const inputId = toggle.id.replace('-toggle', '-input');
+            const input = document.getElementById(inputId);
+            const icon = toggle.querySelector('i');
+            
+            if (input && icon) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
+                } else {
+                    input.type = 'password';
+                    icon.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+                }
             }
         });
-    }
+    });
 
     /* Mobile Menu Toggle */
     const menuToggle = document.getElementById('menu-toggle');

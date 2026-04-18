@@ -113,6 +113,30 @@ body {
   color: var(--primary) !important;
 }
 
+/* Shared Hero Button Standardizer */
+.btn-hero {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 60px !important; /* Standardized height */
+  padding: 0 40px !important; /* Standardized padding */
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+@media (min-width: 640px) {
+  .btn-hero {
+    width: 280px !important; /* Equal Width */
+  }
+}
+
 .bg-overlay {
   position: absolute;
   inset: 0;
